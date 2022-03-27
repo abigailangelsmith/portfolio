@@ -1,0 +1,11 @@
+body {
+  background-color: #FFFFFF; }
+
+h1, h2, h3, h4, h5, h6, li, p, a {
+  color: #707070;
+  font-family: "pragmatica", Arial, Helvetica, sans-serif; }
+
+ul {
+  display: inline-block; }
+  ul li {
+    list-style: none; }
