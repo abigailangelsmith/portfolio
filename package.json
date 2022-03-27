@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Abigail Angel Smith's portfolio for displaying skillset and client / real-world work. Also outlines how to get into contact for work propositions.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abigailangelsmith/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "development",
+    "programming",
+    "abigail angel smith"
+  ],
+  "author": "Abigail Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abigailangelsmith/portfolio/issues"
+  },
+  "homepage": "https://github.com/abigailangelsmith/portfolio#readme"
+}
