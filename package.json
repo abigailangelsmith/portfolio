@@ -4,7 +4,8 @@
   "description": "Abigail Angel Smith's portfolio for displaying skillset and client / real-world work. Also outlines how to get into contact for work propositions.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass sass/main.scss public/assets/styles/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,13 @@
     "programming",
     "abigail angel smith"
   ],
-  "author": "Abigail Smith",
+  "author": "Abigail Angel Smith",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/abigailangelsmith/portfolio/issues"
   },
-  "homepage": "https://github.com/abigailangelsmith/portfolio#readme"
+  "homepage": "https://github.com/abigailangelsmith/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
