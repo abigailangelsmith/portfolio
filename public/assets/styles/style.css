@@ -69,17 +69,17 @@ header {
     align-items: center;
     justify-content: center; }
     #brief-introduction-section div svg {
-      height: 14em; }
+      height: 15em; }
     #brief-introduction-section div #what-i-do ul li {
-      font-size: 1.6em;
+      font-size: 1.8em;
       display: flex;
       align-items: center;
       height: 2em; }
       #brief-introduction-section div #what-i-do ul li img {
-        height: 1.5em;
-        width: 1.5em; }
+        height: 1.2em;
+        width: 1.2em; }
       #brief-introduction-section div #what-i-do ul li p {
-        padding-left: 0.8em;
+        padding-left: 0.4em;
         font-weight: 600; }
         #brief-introduction-section div #what-i-do ul li p span {
           color: #A242FE; }
