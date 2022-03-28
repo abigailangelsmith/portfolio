@@ -83,3 +83,10 @@ header {
         font-weight: 600; }
         #brief-introduction-section div #what-i-do ul li p span {
           color: #A242FE; }
+  #brief-introduction-section #hello {
+    display: flex;
+    align-items: center;
+    padding: 2.5em 0; }
+    #brief-introduction-section #hello svg, #brief-introduction-section #hello h1, #brief-introduction-section #hello img {
+      padding: 0px 0.5em;
+      font-size: 1.5em; }
