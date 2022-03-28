@@ -4,6 +4,22 @@
     margin: 0 auto;
 }
 
+%section-extension {
+    padding: 1.8em;
+
+    h2 {
+        margin: 0;
+        font-size: 2em;
+    }
+}
+
+%slider-indicator-extension {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 25%;
+}
+
 html {
     scroll-behavior: smooth;
 }

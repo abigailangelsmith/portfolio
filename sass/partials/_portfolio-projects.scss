@@ -1,0 +1,11 @@
+#projects-section {
+    @extend %section-extension;
+    
+    border: 5px solid $secondary-background-colour;
+
+    .slider-indicator {
+        @extend %slider-indicator-extension;
+        padding-left: 1.4em;
+    }
+
+}
