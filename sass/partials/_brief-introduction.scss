@@ -1,0 +1,41 @@
+#brief-introduction-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10em;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            height: 14em;
+        }
+
+        #what-i-do {
+
+            ul li {
+                font-size: 1.6em;
+                display: flex;
+                align-items: center;
+                height: 2em;
+                
+                img {
+                    height: 1.5em;
+                    width: 1.5em;
+                }
+
+                p {
+                    padding-left: 0.8em;
+                    font-weight: 600;
+                    
+                    span {
+                        color: $accent-colour-purple;
+                    }
+                }
+            }
+        }
+    }
+}
