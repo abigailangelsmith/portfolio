@@ -2,14 +2,18 @@
     max-width: $max-site-width;
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 %section-extension {
-    padding: 1.8em;
+    padding: 1.8em 0;
 
-    h2 {
-        margin: 0;
-        font-size: 2em;
+    .title {
+        margin: 0 0 0 1.8em;
+        h2 {
+            margin: 0;
+            font-size: 2em;
+        }
     }
 }
 
@@ -17,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 25%;
+    max-width: 20%;
 }
 
 html {
