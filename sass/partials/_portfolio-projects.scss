@@ -5,7 +5,6 @@
 
     .slider-indicator {
         @extend %slider-indicator-extension;
-        padding-left: 2.5em;
         padding-top: 0.4em;
     }
 
@@ -21,10 +20,8 @@
         .display {
 
             .image-container {
+                @extend %image-container-extension;
                 background: $secondary-background-colour;
-                height: 25em;
-                width: 20em;
-                border-radius: 10px;
             }
 
             .links {
