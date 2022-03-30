@@ -192,7 +192,7 @@ header {
 
 #get-in-contact-section {
   text-align: center;
-  padding-top: 1.5em; }
+  padding: 1.5em 0; }
   #get-in-contact-section h1 {
     font-size: 1.8em; }
   #get-in-contact-section div {
@@ -203,3 +203,11 @@ header {
     #get-in-contact-section div p {
       margin-left: 1em;
       font-size: 1.2em; }
+
+footer {
+  background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%);
+  text-align: center;
+  padding: 1em 0; }
+  footer p {
+    margin: 0;
+    color: #FFFFFF; }
