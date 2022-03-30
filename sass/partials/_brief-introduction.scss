@@ -1,0 +1,56 @@
+#brief-introduction-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6em;
+
+    div {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            height: 15em;
+        }
+
+        #what-i-do {
+
+            ul li {
+
+                font-size: 1.8em;
+                display: flex;
+                align-items: center;
+                height: 2em;
+                
+                img {
+                    height: 1.2em;
+                    width: 1.2em;
+                }
+
+                p {
+                    padding-left: 0.4em;
+                    font-weight: 600;
+                    
+                    span {
+                        color: $accent-colour-purple;
+                    }
+                }
+            }
+        }
+    }
+
+    #hello {
+            
+        display: flex;
+        align-items: center;
+        padding: 2.5em 0;
+
+        svg, h1, img {
+            padding: 0px 0.5em;
+            font-size: 1.5em;
+        }
+
+    }
+}
