@@ -60,3 +60,7 @@ ul {
 .site-container {
     @extend %site-width-extension;
 }
+
+#showcase {
+    background: $main-gradent-colour;
+}

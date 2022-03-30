@@ -1,0 +1,18 @@
+#real-world-client-section {
+    @extend %section-extension;
+    background: $secondary-background-colour;
+    margin-top: 3em;
+
+    h2, h3, p, a {
+        color: $main-background-colour;
+    }
+
+    .title {
+    }
+
+    .slider-indicator {
+        @extend %slider-indicator-extension;
+        padding-left: 2.5em;
+        padding-top: 0.4em;
+    }
+}
