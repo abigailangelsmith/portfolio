@@ -1,0 +1,54 @@
+#real-world-client-section {
+    @extend %section-extension;
+    background: $secondary-background-colour;
+    margin-top: 3em;
+
+    h2, h3, p, a {
+        color: $main-background-colour;
+    }
+
+    .title {
+        text-align: right;
+        margin: 0 2.5em 0 0;
+    }
+
+    .slider-indicator {
+        @extend %slider-indicator-extension;
+        padding-top: 0.4em;
+        margin-left: auto;
+    }
+
+    .slider {
+        display: flex;
+        padding: 2.5em 0 3em 0;
+    }
+
+    .card {
+        display: flex;
+        margin-left: 1.5em;
+
+        .display {
+            .image-container {
+                @extend %image-container-extension;
+                background: $main-background-colour;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            width: 12em;
+            margin-bottom: 3em;
+
+            h3, p, div {
+                padding-left: 1em;
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+            }
+
+        }
+    }
+}

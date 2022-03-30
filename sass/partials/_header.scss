@@ -1,0 +1,47 @@
+header {
+    
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    pointer-events: none;
+
+    a {
+        pointer-events: all;
+    }
+
+    nav {
+
+        ul {
+            padding: 0;
+            
+            li {
+                position: relative;
+                text-align: right;
+                font-size: 1.2em;
+                padding-bottom: 1em;
+            }
+
+            a:last-child li {
+                padding: 0;
+            }
+
+            li.active {
+
+                color: $accent-colour-purple;
+                
+                &:after {  
+                    content: '<';
+                    position: absolute;
+                    right: -1.5em;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

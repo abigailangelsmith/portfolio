@@ -1,0 +1,20 @@
+#get-in-contact-section {
+    text-align: center;
+    padding: 1.5em 0;
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1em;
+
+        p {
+            margin-left: 1em;
+            font-size: 1.2em;
+        }
+    }
+}
