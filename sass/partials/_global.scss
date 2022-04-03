@@ -87,3 +87,13 @@ ul {
 #showcase {
     background: $main-gradent-colour;
 }
+
+@media (max-width: $mobile-breakpoint-width) {
+
+    #progress-bar {
+        z-index: 1;
+    }
+    
+
+}
+

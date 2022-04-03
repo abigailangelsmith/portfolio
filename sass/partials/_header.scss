@@ -17,6 +17,10 @@ header {
 
     nav {
 
+        #mobile-nav-menu {
+            display: none;
+        }
+
         ul {
             padding: 0;
             
@@ -44,4 +48,59 @@ header {
             }
         }
     }
+}
+
+@media (max-width: $mobile-breakpoint-width) {
+
+    header {
+
+        width: 100%;
+        max-width: 100%;
+        height: 100px;
+        padding-top: 10px;
+        background: rgba(255,255,255,0.95);
+        pointer-events: all;
+
+        #logo {
+            height: 80px;
+            padding: 10px;
+        }
+
+        nav {
+
+            #mobile-nav-menu {
+                display: block;
+                height: 40px;
+                width: 40px;
+                padding: 30px;
+                margin-left: auto;
+            }
+
+            ul {
+                display: none;
+                position: relative;
+                margin: 0;
+                border-bottom-left-radius: 20px;
+                overflow: hidden;
+
+                li, a:last-child li {
+                    color: #fff;
+                    background: $secondary-background-colour;
+                    padding: 20px 20px 20px 40px;
+
+                    &.active {
+
+                        color: #fff;
+                        background: $main-gradent-colour;
+                        
+                        &:after {  
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
 }
