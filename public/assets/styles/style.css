@@ -157,13 +157,61 @@ header {
         font-weight: 600; }
         #brief-introduction-section div #what-i-do ul li p span {
           color: #A242FE; }
-  #brief-introduction-section #hello {
+  #brief-introduction-section .hello {
     display: flex;
     align-items: center;
     padding: 2.5em 0; }
-    #brief-introduction-section #hello svg, #brief-introduction-section #hello h1, #brief-introduction-section #hello img {
+    #brief-introduction-section .hello.mobile {
+      display: none; }
+    #brief-introduction-section .hello svg, #brief-introduction-section .hello h1, #brief-introduction-section .hello img {
       padding: 0px 0.5em;
       font-size: 1.5em; }
+
+@media (max-width: 1480px) {
+  #brief-introduction-section {
+    padding-top: 1em; }
+    #brief-introduction-section div {
+      flex-direction: column; }
+      #brief-introduction-section div svg {
+        height: 8em;
+        align-self: flex-end;
+        margin-bottom: -6em; }
+      #brief-introduction-section div #what-i-do ul {
+        padding: 0; }
+        #brief-introduction-section div #what-i-do ul li {
+          font-size: 1.5em; }
+    #brief-introduction-section .hello {
+      padding: 1.5em 0; }
+      #brief-introduction-section .hello.desktop {
+        display: none; }
+      #brief-introduction-section .hello.mobile {
+        display: inherit;
+        flex-direction: column; }
+        #brief-introduction-section .hello.mobile div {
+          flex-direction: row; }
+          #brief-introduction-section .hello.mobile div svg {
+            margin: 0;
+            height: 4em;
+            width: 4em; }
+          #brief-introduction-section .hello.mobile div img {
+            width: 100px; }
+        #brief-introduction-section .hello.mobile h1 {
+          font-size: 1.1em; } }
+
+@media (max-width: 600px) {
+  #brief-introduction-section {
+    padding-top: 1em; }
+    #brief-introduction-section div svg {
+      height: 7em;
+      width: 7em;
+      padding-right: 5px; }
+    #brief-introduction-section div #what-i-do {
+      width: 100%; }
+      #brief-introduction-section div #what-i-do ul {
+        padding: 0 10px; }
+        #brief-introduction-section div #what-i-do ul li {
+          font-size: 1.1em;
+          padding: 0 0 20px 0; } }
 
 #projects-section {
   background: #FFFFFF;
