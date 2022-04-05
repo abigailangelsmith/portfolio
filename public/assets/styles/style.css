@@ -270,10 +270,7 @@ header {
       max-width: 80%; }
   #projects-section .card {
     flex-direction: column;
-    margin: 0;
     padding: 0 7px; }
-    #projects-section .card .display .image-container {
-      width: 18.5em; }
     #projects-section .card .display .links {
       justify-content: space-around;
       align-items: center; }
@@ -319,6 +316,29 @@ header {
       #real-world-client-section .card .description .link {
         display: flex;
         align-items: center; }
+
+@media (max-width: 1480px) {
+  #real-world-client-section .title {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    margin: 0; }
+    #real-world-client-section .title .slider-indicator {
+      margin: auto;
+      max-width: 80%; }
+  #real-world-client-section .card {
+    flex-direction: column; }
+    #real-world-client-section .card .description {
+      width: 100%;
+      text-align: center; }
+      #real-world-client-section .card .description .link {
+        justify-content: center;
+        flex-direction: column; }
+        #real-world-client-section .card .description .link svg {
+          height: 6em;
+          width: 6em; }
+        #real-world-client-section .card .description .link p {
+          font-weight: 600; } }
 
 #get-in-contact-section {
   text-align: center;
