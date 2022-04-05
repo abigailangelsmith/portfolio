@@ -354,6 +354,16 @@ header {
       margin-left: 1em;
       font-size: 1.2em; }
 
+@media (max-width: 1480px) {
+  #get-in-contact-section {
+    padding: 10px; }
+    #get-in-contact-section div {
+      flex-direction: column; }
+      #get-in-contact-section div p {
+        margin: 0; }
+        #get-in-contact-section div p a {
+          overflow-wrap: anywhere; } }
+
 footer {
   background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%);
   text-align: center;
