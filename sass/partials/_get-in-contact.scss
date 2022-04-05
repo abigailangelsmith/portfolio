@@ -18,3 +18,24 @@
         }
     }
 }
+
+@media (max-width: $mobile-breakpoint-width) {
+
+    #get-in-contact-section {
+
+        padding: 10px;
+        
+        div {
+            flex-direction: column;
+
+            p {
+
+                margin: 0;
+
+                a {
+                    overflow-wrap: anywhere;
+                }
+            }
+        }
+    }
+}

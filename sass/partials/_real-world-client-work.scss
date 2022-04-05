@@ -52,3 +52,47 @@
         }
     }
 }
+
+@media (max-width: $mobile-breakpoint-width) {
+    #real-world-client-section {
+
+        .title {
+            width: 100%;
+            font-size: 1em;
+            text-align: center;
+            margin: 0;
+
+            .slider-indicator {
+                margin: auto;
+                max-width: 80%;
+            }
+        }
+
+        .slider {
+            padding: 0;
+        }
+
+        .card {
+            flex-direction: column;
+
+            .description {
+                width: 100%;
+                text-align: center;
+
+                .link {
+                    justify-content: center;
+                    flex-direction: column;
+
+                    svg {
+                        height: 6em;
+                        width: 6em;
+                    }
+
+                    p {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

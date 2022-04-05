@@ -64,6 +64,11 @@ ul {
 #showcase {
   background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%); }
 
+
+@media (max-width: 1480px) {
+  #progress-bar {
+    z-index: 1; } }
+
 header {
   position: fixed;
   left: 50%;
@@ -77,6 +82,10 @@ header {
   pointer-events: none; }
   header a {
     pointer-events: all; }
+
+  header nav #mobile-nav-menu {
+    display: none; }
+
   header nav ul {
     padding: 0; }
     header nav ul li {
@@ -93,6 +102,39 @@ header {
         position: absolute;
         right: -1.5em;
         top: 0; }
+
+@media (max-width: 1480px) {
+  header {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    padding-top: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    pointer-events: all; }
+    header #logo {
+      height: 80px;
+      padding: 10px; }
+    header nav #mobile-nav-menu {
+      display: block;
+      height: 40px;
+      width: 40px;
+      padding: 30px;
+      margin-left: auto; }
+    header nav ul {
+      display: none;
+      position: relative;
+      margin: 0;
+      border-bottom-left-radius: 20px;
+      overflow: hidden; }
+      header nav ul li, header nav ul a:last-child li {
+        color: #fff;
+        background: #707070;
+        padding: 20px 30px 20px 100px; }
+        header nav ul li.active, header nav ul a:last-child li.active {
+          color: #fff;
+          background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%); }
+          header nav ul li.active:after, header nav ul a:last-child li.active:after {
+            display: none; } }
 
 #brief-introduction-section {
   display: flex;
@@ -118,13 +160,62 @@ header {
         font-weight: 600; }
         #brief-introduction-section div #what-i-do ul li p span {
           color: #A242FE; }
-  #brief-introduction-section #hello {
+
+  #brief-introduction-section .hello {
     display: flex;
     align-items: center;
     padding: 2.5em 0; }
-    #brief-introduction-section #hello svg, #brief-introduction-section #hello h1, #brief-introduction-section #hello img {
+    #brief-introduction-section .hello.mobile {
+      display: none; }
+    #brief-introduction-section .hello svg, #brief-introduction-section .hello h1, #brief-introduction-section .hello img {
       padding: 0px 0.5em;
       font-size: 1.5em; }
+
+@media (max-width: 1480px) {
+  #brief-introduction-section {
+    padding-top: 1em; }
+    #brief-introduction-section div {
+      flex-direction: column; }
+      #brief-introduction-section div svg {
+        height: 8em;
+        align-self: flex-end;
+        margin-bottom: -6em; }
+      #brief-introduction-section div #what-i-do ul {
+        padding: 0; }
+        #brief-introduction-section div #what-i-do ul li {
+          font-size: 1.5em; }
+    #brief-introduction-section .hello {
+      padding: 1.5em 0; }
+      #brief-introduction-section .hello.desktop {
+        display: none; }
+      #brief-introduction-section .hello.mobile {
+        display: inherit;
+        flex-direction: column; }
+        #brief-introduction-section .hello.mobile div {
+          flex-direction: row; }
+          #brief-introduction-section .hello.mobile div svg {
+            margin: 0;
+            height: 4em;
+            width: 4em; }
+          #brief-introduction-section .hello.mobile div img {
+            width: 100px; }
+        #brief-introduction-section .hello.mobile h1 {
+          font-size: 1.1em; } }
+
+@media (max-width: 600px) {
+  #brief-introduction-section {
+    padding-top: 1em; }
+    #brief-introduction-section div svg {
+      height: 7em;
+      width: 7em;
+      padding-right: 5px; }
+    #brief-introduction-section div #what-i-do {
+      width: 100%; }
+      #brief-introduction-section div #what-i-do ul {
+        padding: 0 10px; }
+        #brief-introduction-section div #what-i-do ul li {
+          font-size: 1.1em;
+          padding: 0 0 20px 0; } }
 
 #projects-section {
   background: #FFFFFF;
@@ -172,6 +263,34 @@ header {
             padding: 0;
             font-weight: 600; }
 
+@media (max-width: 1480px) {
+  #projects-section .title {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    margin: 0; }
+    #projects-section .title .slider-indicator {
+      margin: auto;
+      max-width: 80%; }
+  #projects-section .card {
+    flex-direction: column;
+    padding: 0 7px; }
+    #projects-section .card .display .links {
+      justify-content: space-around;
+      align-items: center; }
+      #projects-section .card .display .links div {
+        flex-direction: column;
+        padding-top: 20px; }
+        #projects-section .card .display .links div svg {
+          height: 6em;
+          width: 6em; }
+    #projects-section .card .description {
+      width: 100%;
+      text-align: center;
+      margin: 0; }
+      #projects-section .card .description > p {
+        text-align: left; } }
+
 #real-world-client-section {
   background: #707070;
   margin-top: 3em; }
@@ -202,6 +321,31 @@ header {
         display: flex;
         align-items: center; }
 
+@media (max-width: 1480px) {
+  #real-world-client-section .title {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    margin: 0; }
+    #real-world-client-section .title .slider-indicator {
+      margin: auto;
+      max-width: 80%; }
+  #real-world-client-section .slider {
+    padding: 0; }
+  #real-world-client-section .card {
+    flex-direction: column; }
+    #real-world-client-section .card .description {
+      width: 100%;
+      text-align: center; }
+      #real-world-client-section .card .description .link {
+        justify-content: center;
+        flex-direction: column; }
+        #real-world-client-section .card .description .link svg {
+          height: 6em;
+          width: 6em; }
+        #real-world-client-section .card .description .link p {
+          font-weight: 600; } }
+
 #get-in-contact-section {
   text-align: center;
   padding: 1.5em 0; }
@@ -216,10 +360,23 @@ header {
       margin-left: 1em;
       font-size: 1.2em; }
 
+
+@media (max-width: 1480px) {
+  #get-in-contact-section {
+    padding: 10px; }
+    #get-in-contact-section div {
+      flex-direction: column; }
+      #get-in-contact-section div p {
+        margin: 0; }
+        #get-in-contact-section div p a {
+          overflow-wrap: anywhere; } }
+
 footer {
   background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%);
   text-align: center;
   padding: 1em 0; }
   footer p {
     margin: 0;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    padding: 5px; }
+
