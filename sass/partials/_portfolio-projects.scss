@@ -76,3 +76,60 @@
 
     }
 }
+
+@media (max-width: $mobile-breakpoint-width) {
+    #projects-section {
+
+        .title {
+            width: 100%;
+            font-size: 1em;
+            text-align: center;
+            margin: 0;
+
+            .slider-indicator {
+                margin: auto;
+                max-width: 80%;
+            }
+        }
+
+        .card {
+            flex-direction: column;
+            margin: 0;
+            padding: 0 7px;
+
+            .display {
+
+                .image-container {
+                    width: 18.5em;
+                }
+
+                .links {
+                    justify-content: space-around;
+                    align-items: center;
+
+                    div {
+                        flex-direction: column;
+                        padding-top: 20px;
+
+                        svg {
+                            height: 6em;
+                            width: 6em;
+                        }
+                    }
+                }
+            }
+
+            .description {
+                width: 100%;
+                text-align: center;
+                margin: 0;
+
+                & > p {
+                    text-align: left;
+                }
+            }
+
+        }
+
+    }
+}

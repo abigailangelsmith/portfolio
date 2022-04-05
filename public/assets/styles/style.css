@@ -259,6 +259,37 @@ header {
             padding: 0;
             font-weight: 600; }
 
+@media (max-width: 1480px) {
+  #projects-section .title {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    margin: 0; }
+    #projects-section .title .slider-indicator {
+      margin: auto;
+      max-width: 80%; }
+  #projects-section .card {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 7px; }
+    #projects-section .card .display .image-container {
+      width: 18.5em; }
+    #projects-section .card .display .links {
+      justify-content: space-around;
+      align-items: center; }
+      #projects-section .card .display .links div {
+        flex-direction: column;
+        padding-top: 20px; }
+        #projects-section .card .display .links div svg {
+          height: 6em;
+          width: 6em; }
+    #projects-section .card .description {
+      width: 100%;
+      text-align: center;
+      margin: 0; }
+      #projects-section .card .description > p {
+        text-align: left; } }
+
 #real-world-client-section {
   background: #707070;
   margin-top: 3em; }
