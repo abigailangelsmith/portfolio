@@ -326,6 +326,8 @@ header {
     #real-world-client-section .title .slider-indicator {
       margin: auto;
       max-width: 80%; }
+  #real-world-client-section .slider {
+    padding: 0; }
   #real-world-client-section .card {
     flex-direction: column; }
     #real-world-client-section .card .description {
