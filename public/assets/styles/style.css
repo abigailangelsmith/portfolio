@@ -64,6 +64,7 @@ ul {
 #showcase {
   background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%); }
 
+
 @media (max-width: 1480px) {
   #progress-bar {
     z-index: 1; } }
@@ -81,8 +82,10 @@ header {
   pointer-events: none; }
   header a {
     pointer-events: all; }
+
   header nav #mobile-nav-menu {
     display: none; }
+
   header nav ul {
     padding: 0; }
     header nav ul li {
@@ -157,6 +160,7 @@ header {
         font-weight: 600; }
         #brief-introduction-section div #what-i-do ul li p span {
           color: #A242FE; }
+
   #brief-introduction-section .hello {
     display: flex;
     align-items: center;
@@ -356,6 +360,7 @@ header {
       margin-left: 1em;
       font-size: 1.2em; }
 
+
 @media (max-width: 1480px) {
   #get-in-contact-section {
     padding: 10px; }
@@ -374,3 +379,4 @@ footer {
     margin: 0;
     color: #FFFFFF;
     padding: 5px; }
+
