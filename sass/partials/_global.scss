@@ -72,11 +72,12 @@ ul {
 }
 
 #progress-bar {
-    width: 100%;
+    width: 0;
     height: 10px;
     position: fixed;
     top: 0;
     background: $main-gradent-colour;
+    background-attachment: fixed;
 }
 
 .site-container {
@@ -85,6 +86,13 @@ ul {
 
 #showcase {
     background: $main-gradent-colour;
+}
+
+.scroll-anchor {
+    position: absolute;
+    margin-top: -10px;
+    height: 1px;
+    width: 100%;
 }
 
 @media (max-width: $mobile-breakpoint-width) {

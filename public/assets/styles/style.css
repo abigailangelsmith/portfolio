@@ -55,11 +55,12 @@ ul {
   background: #3FBBFE; }
 
 #progress-bar {
-  width: 100%;
+  width: 0;
   height: 10px;
   position: fixed;
   top: 0;
-  background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%); }
+  background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%);
+  background-attachment: fixed; }
 
 #showcase {
   background: linear-gradient(90deg, #3FBBFE 0%, #A242FE 100%); }
@@ -144,6 +145,18 @@ header {
     justify-content: center; }
     #brief-introduction-section div svg {
       height: 15em; }
+      #brief-introduction-section div svg g#Group_7 {
+        animation-name: gearRotate;
+        animation-duration: 15s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        transform-origin: 83px 83px;
+        animation-timing-function: linear;
+        transform: translate(83.421px, 37.345px) rotate(0deg); }
+
+@keyframes gearRotate {
+  50% {
+    transform: translate(83.421px, 37.345px) rotate(360deg); } }
     #brief-introduction-section div #what-i-do ul li {
       font-size: 1.8em;
       display: flex;
