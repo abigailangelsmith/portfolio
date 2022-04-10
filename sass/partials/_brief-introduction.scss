@@ -13,6 +13,23 @@
 
         svg {
             height: 15em;
+
+            g#Group_7 {
+                animation-name: gearRotate;
+                animation-duration: 15s;
+                animation-fill-mode: both;
+                animation-iteration-count: infinite;
+                transform-origin: 83px 83px;
+                animation-timing-function: linear;
+                transform: translate(83.421px, 37.345px) rotate(0deg);
+            }
+
+            @keyframes gearRotate {
+
+                50% {
+                    transform: translate(83.421px, 37.345px) rotate(360deg);
+                }
+            }
         }
 
         #what-i-do {

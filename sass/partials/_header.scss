@@ -46,6 +46,10 @@ header {
                     top: 0;
                 }
             }
+
+            &.show {
+                display: inline-block;
+            }
         }
     }
 }
