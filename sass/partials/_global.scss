@@ -88,6 +88,13 @@ ul {
     background: $main-gradent-colour;
 }
 
+.scroll-anchor {
+    position: absolute;
+    margin-top: -10px;
+    height: 1px;
+    width: 100%;
+}
+
 @media (max-width: $mobile-breakpoint-width) {
 
     #progress-bar {
