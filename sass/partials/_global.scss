@@ -1,106 +1,36 @@
-%site-width-extension {
-    max-width: $max-site-width;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
+// html {
+//     scroll-behavior: smooth;
+// }
 
-%section-extension {
-    padding: 2em 0;
+// body {
+//     //background-color: $main-background-colour;
+//     margin: 0;
+//     padding: 0;
+//     position: relative;
+// }
 
-    .title {
-        margin: 0 0 0 2.5em;
-        h2 {
-            margin: 0;
-            font-size: 2em;
-        }
-    }
-}
+// h1, h2, h3, h4, h5, h6, li, p, a {
+//     // color: $text-colour;
+//     // font-family: $main-font;
+//     // text-decoration: none;
+// }
 
-%slider-indicator-extension {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 20%;
-}
-
-%image-container-extension {
-    height: 25em;
-    width: 20em;
-    border-radius: 10px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: $main-background-colour;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-h1, h2, h3, h4, h5, h6, li, p, a {
-    color: $text-colour;
-    font-family: $main-font;
-    text-decoration: none;
-}
-
-ul {
-    display: inline-block;
-    li {
-        list-style: none;
+// ul {
+//     display: inline-block;
+//     li {
+//         list-style: none;
         
-    }
-}
+//     }
+// }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
+// ::-webkit-scrollbar {
+// }
 
-::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.1); 
-}
+// ::-webkit-scrollbar-track {
+// }
 
-::-webkit-scrollbar-thumb {
-    background: $accent-colour-purple; 
-}
+// ::-webkit-scrollbar-thumb {
+// }
 
-::-webkit-scrollbar-thumb:hover {
-    background: $accent-colour-blue;
-}
-
-#progress-bar {
-    width: 0;
-    height: 10px;
-    position: fixed;
-    top: 0;
-    background: $main-gradent-colour;
-    background-attachment: fixed;
-}
-
-.site-container {
-    @extend %site-width-extension;
-}
-
-#showcase {
-    background: $main-gradent-colour;
-}
-
-.scroll-anchor {
-    position: absolute;
-    margin-top: -10px;
-    height: 1px;
-    width: 100%;
-}
-
-@media (max-width: $mobile-breakpoint-width) {
-
-    #progress-bar {
-        z-index: 1;
-    }
-    
-
-}
-
+// ::-webkit-scrollbar-thumb:hover {
+// }
