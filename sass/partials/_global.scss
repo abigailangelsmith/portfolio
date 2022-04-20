@@ -1,36 +1,38 @@
-// html {
-//     scroll-behavior: smooth;
-// }
+html {
+    scroll-behavior: smooth;
+}
 
-// body {
-//     //background-color: $main-background-colour;
-//     margin: 0;
-//     padding: 0;
-//     position: relative;
-// }
+body {
+    background-color: $main-colour;
+    margin: 0;
+    padding: 0;
+    position: relative;
 
-// h1, h2, h3, h4, h5, h6, li, p, a {
-//     // color: $text-colour;
-//     // font-family: $main-font;
-//     // text-decoration: none;
-// }
+    & > section:nth-of-type(even) {
+        background-color: $accent-colour;
 
-// ul {
-//     display: inline-block;
-//     li {
-//         list-style: none;
+        h1, h2, h3, li, p, a {
+            color: $main-colour;
+        }
+    }
+}
+
+h1, h2, h3, li, p, a {
+    color: $accent-colour;
+    font-family: $main-font;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: $accent-font;
+}
+
+ul {
+    
+    display: inline-block;
+
+    li {
+        list-style: none;
         
-//     }
-// }
-
-// ::-webkit-scrollbar {
-// }
-
-// ::-webkit-scrollbar-track {
-// }
-
-// ::-webkit-scrollbar-thumb {
-// }
-
-// ::-webkit-scrollbar-thumb:hover {
-// }
+    }
+}
