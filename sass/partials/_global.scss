@@ -7,39 +7,32 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+
+    & > section:nth-of-type(even) {
+        background-color: $accent-colour;
+
+        h1, h2, h3, li, p, a {
+            color: $main-colour;
+        }
+    }
 }
 
 h1, h2, h3, li, p, a {
     color: $accent-colour;
-    //font-family: $main-font;
+    font-family: $main-font;
     text-decoration: none;
 }
 
-body > section:nth-of-type(even) {
-
-    background-color: $accent-colour;
-
-    h1, h2, h3, li, p, a {
-        color: $main-colour;
-    }
+h1 {
+    font-family: $accent-font;
 }
 
 ul {
-    //display: inline-block;
+    
+    display: inline-block;
+
     li {
         list-style: none;
         
     }
 }
-
-// ::-webkit-scrollbar {
-// }
-
-// ::-webkit-scrollbar-track {
-// }
-
-// ::-webkit-scrollbar-thumb {
-// }
-
-// ::-webkit-scrollbar-thumb:hover {
-// }

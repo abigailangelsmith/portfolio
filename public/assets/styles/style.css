@@ -6,15 +6,20 @@ body {
   margin: 0;
   padding: 0;
   position: relative; }
+  body > section:nth-of-type(even) {
+    background-color: #72FCDB; }
+    body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
+      color: #6662D9; }
 
 h1, h2, h3, li, p, a {
   color: #72FCDB;
+  font-family: "Graphie", Arial, Helvetica, sans-serif;
   text-decoration: none; }
 
-body > section:nth-of-type(even) {
-  background-color: #72FCDB; }
-  body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
-    color: #6662D9; }
+h1 {
+  font-family: "Automate OT", Arial, Helvetica, sans-serif; }
 
-ul li {
-  list-style: none; }
+ul {
+  display: inline-block; }
+  ul li {
+    list-style: none; }
