@@ -6,10 +6,13 @@ body {
   margin: 0;
   padding: 100px 0 0 0;
   position: relative; }
-  body > section:nth-of-type(even) {
-    background-color: #72FCDB; }
-    body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
-      color: #6662D9; }
+  body > section {
+    height: 100vh;
+    padding: 0 15em; }
+    body > section:nth-of-type(even) {
+      background-color: #72FCDB; }
+      body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
+        color: #6662D9; }
 
 h1, h2, h3, li, p, a {
   color: #72FCDB;
@@ -75,3 +78,11 @@ header nav {
       header nav > section #colour-changing-options svg {
         padding: 0 0.5em;
         cursor: pointer; }
+
+#introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  #introduction h1 {
+    align-self: flex-end; }
