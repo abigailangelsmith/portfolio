@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #6662D9;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+h1, h2, h3, li, p, a {
+  color: #72FCDB;
+  text-decoration: none; }
+
+body > section:nth-of-type(even) {
+  background-color: #72FCDB; }
+  body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
+    color: #6662D9; }
+
+ul li {
+  list-style: none; }
