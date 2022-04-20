@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Abigail Angel Smith's portfolio for displaying skillset and client / real-world work. Also outlines how to get into contact for work propositions.",
+  "description": "Abigail Angel Smith's portfolio for displaying skillset and completed work. Also outlines how to get into contact for work propositions.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
