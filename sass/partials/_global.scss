@@ -10,7 +10,7 @@ body {
 
     & > section {
     
-        height: 100vh;
+        height: calc(100vh - 100px);
         padding: 0 15em;
     
         &:nth-of-type(even) {

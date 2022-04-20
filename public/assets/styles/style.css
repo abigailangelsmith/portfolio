@@ -7,7 +7,7 @@ body {
   padding: 100px 0 0 0;
   position: relative; }
   body > section {
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding: 0 15em; }
     body > section:nth-of-type(even) {
       background-color: #72FCDB; }
