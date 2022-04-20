@@ -1,0 +1,43 @@
+header {
+    // #flash-hello, nav {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     flex-flow: row wrap;
+
+    //     & > section {
+
+    //         padding: 1em 2em;
+
+    //         &:nth-of-type(1) {
+    //             flex-grow: 4;
+    //             text-align: right;
+    //         }
+
+    //         &:nth-of-type(2) {
+    //             flex-grow: 3;
+    //         }
+    //     }
+
+    // }
+
+    #flash-hello, nav {
+        display: grid;
+        grid-template-columns: 45% auto;
+        align-items: stretch;
+       
+        & > section {
+            padding: 1em 2em;
+
+            &:nth-of-type(even) {
+                background-color: $accent-colour;
+                    h3, p {
+                        color: $main-colour;
+                    }
+            }
+        }
+
+    }
+
+    
+}

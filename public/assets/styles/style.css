@@ -14,7 +14,8 @@ body {
 h1, h2, h3, li, p, a {
   color: #72FCDB;
   font-family: "Graphie", Arial, Helvetica, sans-serif;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 0; }
 
 h1 {
   font-family: "Automate OT", Arial, Helvetica, sans-serif; }
@@ -23,3 +24,14 @@ ul {
   display: inline-block; }
   ul li {
     list-style: none; }
+
+header #flash-hello, header nav {
+  display: grid;
+  grid-template-columns: 45% auto;
+  align-items: stretch; }
+  header #flash-hello > section, header nav > section {
+    padding: 1em 2em; }
+    header #flash-hello > section:nth-of-type(even), header nav > section:nth-of-type(even) {
+      background-color: #72FCDB; }
+      header #flash-hello > section:nth-of-type(even) h3, header #flash-hello > section:nth-of-type(even) p, header nav > section:nth-of-type(even) h3, header nav > section:nth-of-type(even) p {
+        color: #6662D9; }
