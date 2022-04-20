@@ -5,7 +5,7 @@ html {
 body {
     background-color: $main-colour;
     margin: 0;
-    padding: 0;
+    padding: 100px 0 0 0;
     position: relative;
 
     & > section:nth-of-type(even) {
@@ -21,6 +21,7 @@ h1, h2, h3, li, p, a {
     color: $accent-colour;
     font-family: $main-font;
     text-decoration: none;
+    margin: 0;
 }
 
 h1 {

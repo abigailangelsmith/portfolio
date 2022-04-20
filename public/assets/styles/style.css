@@ -4,7 +4,7 @@ html {
 body {
   background-color: #6662D9;
   margin: 0;
-  padding: 0;
+  padding: 100px 0 0 0;
   position: relative; }
   body > section:nth-of-type(even) {
     background-color: #72FCDB; }
@@ -14,7 +14,8 @@ body {
 h1, h2, h3, li, p, a {
   color: #72FCDB;
   font-family: "Graphie", Arial, Helvetica, sans-serif;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 0; }
 
 h1 {
   font-family: "Automate OT", Arial, Helvetica, sans-serif; }
@@ -23,3 +24,54 @@ ul {
   display: inline-block; }
   ul li {
     list-style: none; }
+
+header #flash-hello, header nav {
+  display: grid;
+  grid-template-columns: 45% auto;
+  align-items: stretch;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #6662D9; }
+  header #flash-hello > section, header nav > section {
+    padding: 0 2em;
+    display: grid;
+    align-items: center; }
+    header #flash-hello > section svg, header nav > section svg {
+      justify-self: end;
+      height: 3em;
+      width: 3em; }
+    header #flash-hello > section p, header nav > section p {
+      font-family: "Automate OT", Arial, Helvetica, sans-serif;
+      font-weight: bold; }
+    header #flash-hello > section:nth-of-type(even), header nav > section:nth-of-type(even) {
+      background-color: #72FCDB; }
+      header #flash-hello > section:nth-of-type(even) h3, header #flash-hello > section:nth-of-type(even) p, header nav > section:nth-of-type(even) h3, header nav > section:nth-of-type(even) p {
+        color: #6662D9; }
+
+header nav {
+  opacity: 0;
+  pointer-events: none; }
+  header nav p {
+    position: relative; }
+  header nav p.active::after {
+    height: 1em;
+    width: 1em;
+    background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.5em;
+    content: ''; }
+  header nav section:last-of-type p.active:after {
+    background-image: url(/public/assets/images/nav-arrow_purple.svg); }
+  header nav > section {
+    grid-template-columns: 50% auto;
+    justify-items: center; }
+    header nav > section #colour-changing-options {
+      justify-self: end; }
+      header nav > section #colour-changing-options svg {
+        padding: 0 0.5em;
+        cursor: pointer; }

@@ -1,0 +1,83 @@
+header {
+
+    #flash-hello, nav {
+        display: grid;
+        grid-template-columns: 45% auto;
+        align-items: stretch;
+        height: 100px;
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $main-colour;
+       
+        & > section {
+            padding: 0 2em;
+            display: grid;
+            align-items: center;
+
+            svg {
+                justify-self: end;
+                height: 3em;
+                width: 3em;
+            }
+
+            p {
+                font-family: $accent-font;
+                font-weight: bold;
+            }
+
+            &:nth-of-type(even) {
+                background-color: $accent-colour;
+
+                    h3, p {
+                        color: $main-colour;
+                    }
+            }
+        }
+    }
+
+    nav {
+
+        // TODO: Use to transition between states.
+        opacity: 0;
+        pointer-events: none;
+    
+        p {
+            position: relative;
+        }
+
+        p.active::after {
+            height: 1em;
+            width: 1em;
+            background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -1.5em;
+            content: '';
+        }
+
+        section:last-of-type p.active:after {
+            background-image: url(/public/assets/images/nav-arrow_purple.svg);
+        }
+
+        & > section {
+            grid-template-columns: 50% auto;
+            justify-items: center;
+
+            #colour-changing-options {
+                justify-self: end;
+
+                svg {
+                    padding: 0 0.5em;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    
+}
