@@ -7,7 +7,7 @@ body {
   padding: 100px 0 0 0;
   position: relative; }
   body > section {
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding: 0 15em; }
     body > section:nth-of-type(even) {
       background-color: #72FCDB; }
@@ -184,9 +184,10 @@ header nav {
 #contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: center; }
   #contact h1 {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding-bottom: 5em; }
   #contact #info {
     display: flex;
     justify-content: space-around; }
@@ -238,3 +239,23 @@ header nav {
             cursor: default; }
           #contact #info aside #extra-info div:nth-of-type(2) {
             padding-left: 1em; }
+
+footer {
+  display: grid;
+  grid-template-columns: 45% auto;
+  align-items: stretch;
+  height: 100px; }
+  footer > div {
+    padding: 0 2em;
+    display: flex;
+    align-items: center; }
+    footer > div p {
+      font-weight: bold; }
+    footer > div:nth-of-type(odd) {
+      background-color: #72FCDB;
+      justify-content: flex-end; }
+      footer > div:nth-of-type(odd) h3 {
+        color: #6662D9;
+        padding-right: 3em; }
+      footer > div:nth-of-type(odd) svg {
+        height: 3em; }
