@@ -1,0 +1,32 @@
+footer {
+
+    display: grid;
+    grid-template-columns: 45% auto;
+    align-items: stretch;
+    height: 100px;
+
+    & > div {
+        padding: 0 2em;
+        display: flex;
+        align-items: center;
+
+        p {
+            font-weight: bold;
+        }
+
+        &:nth-of-type(odd) {
+            background-color: $accent-colour;
+            justify-content: flex-end;
+
+                h3 {
+                    color: $main-colour;
+                    padding-right: 3em;
+                }
+
+                svg {
+                    height: 3em;
+                }
+        }
+    }
+
+}
