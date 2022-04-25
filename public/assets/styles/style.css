@@ -184,9 +184,10 @@ header nav {
 #contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: center; }
   #contact h1 {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding-bottom: 5em; }
   #contact #info {
     display: flex;
     justify-content: space-around; }
