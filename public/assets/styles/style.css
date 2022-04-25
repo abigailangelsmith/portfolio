@@ -5,14 +5,17 @@ body {
   background-color: #6662D9;
   margin: 0;
   padding: 100px 0 0 0;
-  position: relative; }
+  position: relative;
+  scroll-behavior: smooth; }
   body > section {
     height: calc(100vh - 100px);
-    padding: 0 15em; }
+    padding: 100px 15em 0 15em; }
     body > section:nth-of-type(even) {
       background-color: #72FCDB; }
       body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
         color: #6662D9; }
+    body > section:last-of-type {
+      height: calc(100vh - 200px); }
 
 h1, h2, h3, li, p, a {
   color: #72FCDB;
@@ -53,31 +56,31 @@ header #flash-hello, header nav {
       header #flash-hello > section:nth-of-type(even) h3, header #flash-hello > section:nth-of-type(even) p, header nav > section:nth-of-type(even) h3, header nav > section:nth-of-type(even) p {
         color: #6662D9; }
 
-header nav {
-  opacity: 0;
-  pointer-events: none; }
-  header nav p {
-    position: relative; }
-  header nav p.active::after {
-    height: 1em;
-    width: 1em;
-    background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
-    background-size: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -1.5em;
-    content: ''; }
-  header nav section:last-of-type p.active:after {
-    background-image: url(/public/assets/images/nav-arrow_purple.svg); }
-  header nav > section {
-    grid-template-columns: 50% auto;
-    justify-items: center; }
-    header nav > section #colour-changing-options {
-      justify-self: end; }
-      header nav > section #colour-changing-options svg {
-        padding: 0 0.5em;
-        cursor: pointer; }
+header nav p {
+  position: relative; }
+
+header nav p.active::after {
+  height: 1em;
+  width: 1em;
+  background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1.5em;
+  content: ''; }
+
+header nav section:last-of-type p.active:after {
+  background-image: url(/public/assets/images/nav-arrow_purple.svg); }
+
+header nav > section {
+  grid-template-columns: 50% auto;
+  justify-items: center; }
+  header nav > section #colour-changing-options {
+    justify-self: end; }
+    header nav > section #colour-changing-options svg {
+      padding: 0 0.5em;
+      cursor: pointer; }
 
 #introduction {
   display: flex;

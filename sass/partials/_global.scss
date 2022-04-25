@@ -7,11 +7,12 @@ body {
     margin: 0;
     padding: 100px 0 0 0;
     position: relative;
+    scroll-behavior: smooth;
 
     & > section {
     
         height: calc(100vh - 100px);
-        padding: 0 15em;
+        padding: 100px 15em 0 15em;
     
         &:nth-of-type(even) {
             background-color: $accent-colour;
@@ -19,6 +20,10 @@ body {
             h1, h2, h3, li, p, a {
                 color: $main-colour;
             }
+        }
+
+        &:last-of-type {
+            height: calc(100vh - 200px);
         }
     }
 }
