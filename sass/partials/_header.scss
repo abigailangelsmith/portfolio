@@ -7,6 +7,7 @@ header {
         height: 100px;
 
         position: fixed;
+        z-index: 2;
         top: 0;
         width: 100%;
         background-color: $main-colour;
@@ -40,8 +41,8 @@ header {
     nav {
 
         // TODO: Use to transition between states.
-        opacity: 0;
-        pointer-events: none;
+        //opacity: 0;
+        //pointer-events: none;
     
         p {
             position: relative;
