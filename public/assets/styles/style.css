@@ -2,15 +2,23 @@
   --main-colour: var(--p-t_main-colour);
   --accent-colour: var(--p-t_accent-colour);
   --opacity-colour: var(--p-t_opacity-colour);
+  --main-nav-arrow: var(--p-t_main-nav-arrow);
+  --accent-nav-arrow: var(--p-t_accent-nav-arrow);
   --p-t_main-colour: #6662D9;
   --p-t_accent-colour: #72FCDB;
-  --p-t_opacity-colour: #6763d9d9;
+  --p-t_opacity-colour: #6763d9cc;
+  --p-t_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_p-t_main.svg);
+  --p-t_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_p-t_accent.svg);
   --o-b_main-colour: #FFAB34;
   --o-b_accent-colour: #84297E;
-  --o-b_opacity-colour: #FFAB34;
+  --o-b_opacity-colour: #ffab34cc;
+  --o-b_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_o-b_main.svg);
+  --o-b_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_o-b_accent.svg);
   --b-ng_main-colour: #0697B5;
   --b-ng_accent-colour: #9EF204;
-  --b-ng_opacity-colour: #0697B5; }
+  --b-ng_opacity-colour: #0697b5cc;
+  --b-ng_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_b-ng_main.svg);
+  --b-ng_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_b-ng_accent.svg); }
 
 html {
   scroll-behavior: smooth; }
@@ -78,7 +86,8 @@ header nav p {
 header nav p.active::after {
   height: 1em;
   width: 1em;
-  background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
+  background-image: var(--accent-nav-arrow);
+  background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
   left: 50%;
@@ -87,7 +96,7 @@ header nav p.active::after {
   content: ''; }
 
 header nav section:last-of-type p.active:after {
-  background-image: url(/public/assets/images/nav-arrow_purple.svg); }
+  background-image: var(--main-nav-arrow); }
 
 header nav > section {
   grid-template-columns: 50% auto;

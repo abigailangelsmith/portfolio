@@ -51,7 +51,8 @@ header {
         p.active::after {
             height: 1em;
             width: 1em;
-            background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
+            background-image: var(--accent-nav-arrow);
+            background-repeat: no-repeat;
             background-size: 100%;
             position: absolute;
             left: 50%;
@@ -61,7 +62,7 @@ header {
         }
 
         section:last-of-type p.active:after {
-            background-image: url(/public/assets/images/nav-arrow_purple.svg);
+            background-image: var(--main-nav-arrow);
         }
 
         & > section {

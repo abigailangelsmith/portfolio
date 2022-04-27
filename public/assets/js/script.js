@@ -30,9 +30,12 @@
             const scheme = event.target.dataset.scheme;
 
             // update css root properties with the chosen variable
-            root.style.setProperty('--main-colour', 'var(--' + scheme + '_main-colour');
-            root.style.setProperty('--accent-colour', 'var(--' + scheme + '_accent-colour');
-            root.style.setProperty('--opacity-colour', 'var(--' + scheme + '_opacity-colour');
+            root.style.setProperty('--main-colour', 'var(--' + scheme + '_main-colour)');
+            root.style.setProperty('--accent-colour', 'var(--' + scheme + '_accent-colour)');
+            root.style.setProperty('--opacity-colour', 'var(--' + scheme + '_opacity-colour)');
+            root.style.setProperty('--main-nav-arrow', 'var(--' + scheme + '_main-nav-arrow)');
+            root.style.setProperty('--accent-nav-arrow', 'var(--' + scheme + '_accent-nav-arrow)');
+        
 
             // change the icon and dataset property - use css to fill colours using the dataset property
             const oldScheme = body.dataset.currentColourScheme;
