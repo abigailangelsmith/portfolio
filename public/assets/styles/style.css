@@ -1,8 +1,22 @@
+:root {
+  --main-colour: var(--p-t_main-colour);
+  --accent-colour: var(--p-t_accent-colour);
+  --opacity-colour: var(--p-t_opacity-colour);
+  --p-t_main-colour: #6662D9;
+  --p-t_accent-colour: #72FCDB;
+  --p-t_opacity-colour: #6763d9d9;
+  --o-b_main-colour: #FFAB34;
+  --o-b_accent-colour: #84297E;
+  --o-b_opacity-colour: #FFAB34;
+  --b-ng_main-colour: #0697B5;
+  --b-ng_accent-colour: #9EF204;
+  --b-ng_opacity-colour: #0697B5; }
+
 html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #6662D9;
+  background-color: var(--main-colour);
   margin: 0;
   padding: 100px 0 0 0;
   position: relative;
@@ -10,16 +24,16 @@ body {
   body > section {
     height: calc(100vh - 100px);
     padding: 100px 5em 0 5em;
-    background-color: #6662D9; }
+    background-color: var(--main-colour); }
     body > section:nth-of-type(even) {
-      background-color: #72FCDB; }
+      background-color: var(--accent-colour); }
       body > section:nth-of-type(even) h1, body > section:nth-of-type(even) h2, body > section:nth-of-type(even) h3, body > section:nth-of-type(even) li, body > section:nth-of-type(even) p, body > section:nth-of-type(even) a {
-        color: #6662D9; }
+        color: var(--main-colour); }
     body > section:last-of-type {
       height: calc(100vh - 200px); }
 
 h1, h2, h3, li, p, a {
-  color: #72FCDB;
+  color: var(--accent-colour);
   font-family: "Graphie", Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 0; }
@@ -41,7 +55,7 @@ header #flash-hello, header nav {
   z-index: 2;
   top: 0;
   width: 100%;
-  background-color: #6662D9; }
+  background-color: var(--main-colour); }
   header #flash-hello > section, header nav > section {
     padding: 0 2em;
     display: grid;
@@ -54,9 +68,9 @@ header #flash-hello, header nav {
       font-family: "Automate OT", Arial, Helvetica, sans-serif;
       font-weight: bold; }
     header #flash-hello > section:nth-of-type(even), header nav > section:nth-of-type(even) {
-      background-color: #72FCDB; }
+      background-color: var(--accent-colour); }
       header #flash-hello > section:nth-of-type(even) h3, header #flash-hello > section:nth-of-type(even) p, header nav > section:nth-of-type(even) h3, header nav > section:nth-of-type(even) p {
-        color: #6662D9; }
+        color: var(--main-colour); }
 
 header nav p {
   position: relative; }
@@ -173,7 +187,7 @@ header nav > section {
     #work .project-tile .overlay {
       height: 100%;
       width: 100%;
-      background: #6763d9d9;
+      background: var(--opacity-colour);
       position: absolute;
       top: 0;
       left: 0; }
@@ -267,10 +281,10 @@ footer {
     footer > div p {
       font-weight: bold; }
     footer > div:nth-of-type(odd) {
-      background-color: #72FCDB;
+      background-color: var(--accent-colour);
       justify-content: flex-end; }
       footer > div:nth-of-type(odd) h3 {
-        color: #6662D9;
+        color: var(--main-colour);
         padding-right: 3em; }
       footer > div:nth-of-type(odd) svg {
         height: 3em; }

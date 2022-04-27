@@ -10,7 +10,7 @@ header {
         z-index: 2;
         top: 0;
         width: 100%;
-        background-color: $main-colour;
+        background-color:var(--main-colour);
        
         & > section {
             padding: 0 2em;
@@ -29,10 +29,10 @@ header {
             }
 
             &:nth-of-type(even) {
-                background-color: $accent-colour;
+                background-color: var(--accent-colour);
 
                     h3, p {
-                        color: $main-colour;
+                        color: var(--main-colour);
                     }
             }
         }

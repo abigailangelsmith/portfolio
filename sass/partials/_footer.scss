@@ -16,11 +16,11 @@ footer {
         }
 
         &:nth-of-type(odd) {
-            background-color: $accent-colour;
+            background-color: var(--accent-colour);
             justify-content: flex-end;
 
                 h3 {
-                    color: $main-colour;
+                    color: var(--main-colour);
                     padding-right: 3em;
                 }
 
