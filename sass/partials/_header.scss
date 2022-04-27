@@ -10,7 +10,7 @@ header {
         z-index: 2;
         top: 0;
         width: 100%;
-        background-color: $main-colour;
+        background-color:var(--main-colour);
        
         & > section {
             padding: 0 2em;
@@ -29,10 +29,10 @@ header {
             }
 
             &:nth-of-type(even) {
-                background-color: $accent-colour;
+                background-color: var(--accent-colour);
 
                     h3, p {
-                        color: $main-colour;
+                        color: var(--main-colour);
                     }
             }
         }
@@ -51,7 +51,8 @@ header {
         p.active::after {
             height: 1em;
             width: 1em;
-            background: url(/public/assets/images/nav-arrow_green.svg) no-repeat;
+            background-image: var(--accent-nav-arrow);
+            background-repeat: no-repeat;
             background-size: 100%;
             position: absolute;
             left: 50%;
@@ -61,7 +62,7 @@ header {
         }
 
         section:last-of-type p.active:after {
-            background-image: url(/public/assets/images/nav-arrow_purple.svg);
+            background-image: var(--main-nav-arrow);
         }
 
         & > section {
@@ -74,6 +75,58 @@ header {
                 svg {
                     padding: 0 0.5em;
                     cursor: pointer;
+
+                    path {
+                        pointer-events: none;
+                    }
+
+                    &[data-scheme="p-t"] {
+
+                        path[data-name="filling-bucket"] {
+                            fill: var(--p-t_main-colour);
+                        }
+
+                        path[data-name="filling-drop"] {
+                            fill: var(--p-t_accent-colour);
+                        }
+
+                        path[data-name="outline"] {
+                            fill: var(--main-colour);
+                        }
+
+                    }
+
+                    &[data-scheme="o-b"] {
+
+                        path[data-name="filling-bucket"] {
+                            fill: var(--o-b_main-colour);
+                        }
+
+                        path[data-name="filling-drop"] {
+                            fill: var(--o-b_accent-colour);
+                        }
+
+                        path[data-name="outline"] {
+                            fill: var(--main-colour);
+                        }
+
+                    }
+
+                    &[data-scheme="b-ng"] {
+
+                        path[data-name="filling-bucket"] {
+                            fill: var(--b-ng_main-colour);
+                        }
+
+                        path[data-name="filling-drop"] {
+                            fill: var(--b-ng_accent-colour);
+                        }
+
+                        path[data-name="outline"] {
+                            fill: var(--main-colour);
+                        }
+
+                    }
                 }
             }
         }

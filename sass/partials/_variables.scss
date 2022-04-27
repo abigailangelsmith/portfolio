@@ -1,7 +1,32 @@
-// Colour Scheme
-$main-colour: #6662D9;
-$accent-colour: #72FCDB;
-$opacity-colour: #6763d9d9;
+:root {
+    // Variables Used
+    --main-colour: var(--p-t_main-colour);
+    --accent-colour: var(--p-t_accent-colour);
+    --opacity-colour: var(--p-t_opacity-colour);
+    --main-nav-arrow: var(--p-t_main-nav-arrow);
+    --accent-nav-arrow: var(--p-t_accent-nav-arrow);
+
+    // Purple / Turquoise Colour Scheme
+    --p-t_main-colour: #6662D9;
+    --p-t_accent-colour: #72FCDB;
+    --p-t_opacity-colour: #6763d9cc;
+    --p-t_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_p-t_main.svg);
+    --p-t_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_p-t_accent.svg);
+
+    // Orange / Burgundy Colour Scheme
+    --o-b_main-colour: #FFAB34;
+    --o-b_accent-colour: #84297E;
+    --o-b_opacity-colour: #ffab34cc;
+    --o-b_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_o-b_main.svg);
+    --o-b_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_o-b_accent.svg);
+
+    // Blue / Neon Green Colour Scheme
+    --b-ng_main-colour: #0697B5;
+    --b-ng_accent-colour: #9EF204;
+    --b-ng_opacity-colour: #0697b5cc;
+    --b-ng_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_b-ng_main.svg);
+    --b-ng_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_b-ng_accent.svg);
+}
 
 // Fonts
 $main-font: 'Graphie', Arial, Helvetica, sans-serif;
