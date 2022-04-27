@@ -1,7 +1,24 @@
-// Colour Scheme
-$main-colour: #6662D9;
-$accent-colour: #72FCDB;
-$opacity-colour: #6763d9d9;
+:root {
+    // Variables Used
+    --main-colour: var(--p-t_main-colour);
+    --accent-colour: var(--p-t_accent-colour);
+    --opacity-colour: var(--p-t_opacity-colour);
+
+    // Purple / Turquoise Colour Scheme
+    --p-t_main-colour: #6662D9;
+    --p-t_accent-colour: #72FCDB;
+    --p-t_opacity-colour: #6763d9d9;
+
+    // Orange / Burgundy Colour Scheme
+    --o-b_main-colour: #FFAB34;
+    --o-b_accent-colour: #84297E;
+    --o-b_opacity-colour: #FFAB34; // TODO: Update with correct colour
+
+    // Blue / Neon Green Colour Scheme
+    --b-ng_main-colour: #0697B5;
+    --b-ng_accent-colour: #9EF204;
+    --b-ng_opacity-colour: #0697B5; // TODO: Update with correct colour
+}
 
 // Fonts
 $main-font: 'Graphie', Arial, Helvetica, sans-serif;
