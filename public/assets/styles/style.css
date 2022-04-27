@@ -99,6 +99,24 @@ header nav > section {
       cursor: pointer; }
       header nav > section #colour-changing-options svg path {
         pointer-events: none; }
+      header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="filling-bucket"] {
+        fill: var(--p-t_main-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="filling-drop"] {
+        fill: var(--p-t_accent-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="outline"] {
+        fill: var(--main-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="filling-bucket"] {
+        fill: var(--o-b_main-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="filling-drop"] {
+        fill: var(--o-b_accent-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="outline"] {
+        fill: var(--main-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="filling-bucket"] {
+        fill: var(--b-ng_main-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="filling-drop"] {
+        fill: var(--b-ng_accent-colour); }
+      header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="outline"] {
+        fill: var(--main-colour); }
 
 #introduction {
   display: flex;
