@@ -4,6 +4,7 @@ footer {
     grid-template-columns: 45% auto;
     align-items: stretch;
     height: 100px;
+    position: relative;
 
     & > div {
         padding: 0 2em;

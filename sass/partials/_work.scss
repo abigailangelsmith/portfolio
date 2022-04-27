@@ -11,6 +11,10 @@
          "tiles tiles tech";
     align-items: center;
 
+    margin-top: 100vh;
+    z-index: 1;
+    position: relative;
+
     h1 {
         grid-area: heading;
     }

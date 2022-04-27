@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: space-around;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 10em);
+
     h1 {
         align-self: flex-end;
     }
