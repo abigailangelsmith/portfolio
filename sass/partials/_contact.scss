@@ -10,6 +10,12 @@
         padding-bottom: 5em;
     }
 
+    svg {
+        path, circle {
+            fill: var(--accent-colour);
+        }
+    }
+
     #info {
         display: flex;
         justify-content: space-around;

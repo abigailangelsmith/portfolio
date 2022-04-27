@@ -29,6 +29,8 @@ body {
   padding: 100px 0 0 0;
   position: relative;
   scroll-behavior: smooth; }
+  body svg path, body svg circle {
+    fill: var(--main-colour); }
   body > section {
     height: calc(100vh - 100px);
     padding: 100px 5em 0 5em;
@@ -234,6 +236,8 @@ header nav > section {
         width: 2em;
         height: 2em;
         padding: 1em 0 0 0; }
+        #work .project-tile .tech-used svg path {
+          fill: var(--accent-colour); }
         #work .project-tile .tech-used svg:first-of-type {
           padding: 0; }
 
@@ -245,6 +249,8 @@ header nav > section {
   #contact h1 {
     align-self: flex-end;
     padding-bottom: 5em; }
+  #contact svg path, #contact svg circle {
+    fill: var(--accent-colour); }
   #contact #info {
     display: flex;
     justify-content: space-around; }

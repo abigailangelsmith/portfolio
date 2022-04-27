@@ -148,6 +148,10 @@
                 height: 2em;
                 padding: 1em 0 0 0;
 
+                path {
+                    fill: var(--accent-colour);
+                }
+
                 &:first-of-type {
                     padding: 0;
                 }

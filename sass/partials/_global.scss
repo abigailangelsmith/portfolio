@@ -9,6 +9,12 @@ body {
     position: relative;
     scroll-behavior: smooth;
 
+    svg {
+        path, circle {
+            fill: var(--main-colour);
+        }
+    }
+
     & > section {
     
         height: calc(100vh - 100px);
