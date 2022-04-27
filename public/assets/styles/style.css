@@ -97,6 +97,8 @@ header nav > section {
     header nav > section #colour-changing-options svg {
       padding: 0 0.5em;
       cursor: pointer; }
+      header nav > section #colour-changing-options svg path {
+        pointer-events: none; }
 
 #introduction {
   display: flex;
