@@ -13,6 +13,7 @@ body {
     
         height: calc(100vh - 100px);
         padding: 100px 5em 0 5em;
+        background-color: $main-colour;
     
         &:nth-of-type(even) {
             background-color: $accent-colour;
