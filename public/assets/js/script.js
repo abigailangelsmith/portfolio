@@ -23,6 +23,7 @@
 
         let root = document.documentElement;
         let body = document.body;
+        let picture = document.querySelector('#picture-of-me img');
         let colourSchemeIcons = document.querySelectorAll("#colour-changing-options > svg");
 
         function onClickColourSchemeChange(event) {
@@ -33,6 +34,8 @@
             root.style.setProperty('--opacity-colour', 'var(--' + scheme + '_opacity-colour)');
             root.style.setProperty('--main-nav-arrow', 'var(--' + scheme + '_main-nav-arrow)');
             root.style.setProperty('--accent-nav-arrow', 'var(--' + scheme + '_accent-nav-arrow)');
+            
+            picture.src = '/public/assets/images/pictures/picture_' + scheme + '.png';
         
             const oldScheme = body.dataset.currentColourScheme;
 
