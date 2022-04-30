@@ -308,7 +308,8 @@ footer {
   grid-template-columns: 45% auto;
   align-items: stretch;
   height: 100px;
-  position: relative; }
+  position: relative;
+  background-color: var(--main-colour); }
   footer > div {
     padding: 0 2em;
     display: flex;
