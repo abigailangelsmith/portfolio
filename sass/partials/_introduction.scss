@@ -14,4 +14,22 @@
         align-self: flex-end;
     }
 
+    svg {
+
+        #commits {
+            stroke: var(--accent-colour);
+            stroke-dashoffset: 1847px;
+            stroke-dasharray: 1847px;
+            animation: line 3s ease forwards;
+        }
+
+    }
+
+
+    @keyframes line {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
 }

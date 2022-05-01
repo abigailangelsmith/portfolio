@@ -140,6 +140,15 @@ header nav > section {
   width: calc(100vw - 10em); }
   #introduction h1 {
     align-self: flex-end; }
+  #introduction svg #commits {
+    stroke: var(--accent-colour);
+    stroke-dashoffset: 1847px;
+    stroke-dasharray: 1847px;
+    animation: line 3s ease forwards; }
+
+@keyframes line {
+  to {
+    stroke-dashoffset: 0; } }
 
 #work {
   display: grid;
