@@ -133,13 +133,46 @@ header nav > section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: fixed;
   top: 0;
   left: 0;
   width: calc(100vw - 10em); }
   #introduction h1 {
     align-self: flex-end; }
+  #introduction svg .pull-request-icon {
+    stroke: var(--accent-colour);
+    stroke-miterlimit: 10;
+    stroke-width: 7px; }
+  #introduction svg .pull-request-icon .circle, #introduction svg .pull-request-icon .arrow-head {
+    stroke: none;
+    fill: var(--accent-colour); }
+  #introduction svg .merge-icon {
+    stroke: var(--accent-colour);
+    stroke-miterlimit: 10;
+    stroke-width: 7px; }
+  #introduction svg .merge-icon .circle {
+    stroke: none;
+    fill: var(--accent-colour); }
+  #introduction svg .pull-request-icon .text, #introduction svg .merge-icon .text {
+    stroke: none; }
+  #introduction svg .travel {
+    stroke: var(--accent-colour);
+    stroke-miterlimit: 10;
+    stroke-width: 7px; }
+  #introduction svg .travel path {
+    fill: none; }
+  #introduction svg .commit path {
+    stroke: none;
+    fill: var(--accent-colour);
+    opacity: 0; }
+  #introduction svg .text {
+    font-family: AutomateOT-Bold, Automate OT;
+    font-size: 14px;
+    fill: var(--accent-colour);
+    opacity: 0; }
+  #introduction svg .pull-request-icon .text {
+    opacity: 1; }
   #introduction svg .travel > path {
     stroke-dashoffset: 216px;
     stroke-dasharray: 216px;
@@ -152,17 +185,17 @@ header nav > section {
     animation-delay: 7s; }
   #introduction svg .travel.path-5 > path {
     animation-delay: 9s; }
-  #introduction svg .commit text, #introduction svg .merge-icon text {
+  #introduction svg .commit text, #introduction svg .commit path, #introduction svg .merge-icon text, #introduction svg .merge-icon path {
     animation: show 1s ease forwards; }
-  #introduction svg .commit.commit-1 > text, #introduction svg .merge-icon.commit-1 > text {
+  #introduction svg .commit.commit-1 > text, #introduction svg .commit.commit-1 > path, #introduction svg .merge-icon.commit-1 > text, #introduction svg .merge-icon.commit-1 > path {
     animation-delay: 0s; }
-  #introduction svg .commit.commit-2 > text, #introduction svg .merge-icon.commit-2 > text {
+  #introduction svg .commit.commit-2 > text, #introduction svg .commit.commit-2 > path, #introduction svg .merge-icon.commit-2 > text, #introduction svg .merge-icon.commit-2 > path {
     animation-delay: 2s; }
-  #introduction svg .commit.commit-3 > text, #introduction svg .merge-icon.commit-3 > text {
+  #introduction svg .commit.commit-3 > text, #introduction svg .commit.commit-3 > path, #introduction svg .merge-icon.commit-3 > text, #introduction svg .merge-icon.commit-3 > path {
     animation-delay: 5s; }
-  #introduction svg .commit.commit-4 > text, #introduction svg .merge-icon.commit-4 > text {
+  #introduction svg .commit.commit-4 > text, #introduction svg .commit.commit-4 > path, #introduction svg .merge-icon.commit-4 > text, #introduction svg .merge-icon.commit-4 > path {
     animation-delay: 7s; }
-  #introduction svg .commit.commit-5 > text, #introduction svg .merge-icon.commit-5 > text {
+  #introduction svg .commit.commit-5 > text, #introduction svg .commit.commit-5 > path, #introduction svg .merge-icon.commit-5 > text, #introduction svg .merge-icon.commit-5 > path {
     animation-delay: 9s; }
   #introduction svg .commit > text, #introduction svg .merge-icon > text {
     animation-delay: 9.2s; }

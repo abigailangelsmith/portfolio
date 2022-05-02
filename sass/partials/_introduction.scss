@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     position: fixed;
     top: 0;
@@ -31,6 +31,57 @@
         //         stroke: pink;
         //     }
         // }
+
+        .pull-request-icon {
+            stroke: var(--accent-colour);
+            stroke-miterlimit:10;
+            stroke-width:7px;
+        }
+        .pull-request-icon .circle, .pull-request-icon .arrow-head {
+            stroke: none;
+            fill: var(--accent-colour);
+        }
+        
+        .merge-icon {
+            stroke: var(--accent-colour);
+            stroke-miterlimit:10;
+            stroke-width:7px;
+        }
+        .merge-icon .circle {
+            stroke: none;
+            fill: var(--accent-colour);
+        }
+
+        .pull-request-icon .text, .merge-icon .text {
+            stroke: none;
+        }
+
+        .travel {
+            stroke: var(--accent-colour);
+            stroke-miterlimit:10;
+            stroke-width:7px;
+        }
+        .travel path {
+            fill: none;
+        }
+
+        .commit path {
+            stroke: none;
+            fill: var(--accent-colour);
+            opacity: 0;
+        }
+
+        .text {
+            font-family:AutomateOT-Bold, Automate OT;
+            font-size:14px;
+            fill: var(--accent-colour);
+            opacity: 0;
+        }
+
+        .pull-request-icon .text {
+            opacity: 1;
+        }
+        
         .travel {
 
             & > path {
@@ -58,27 +109,27 @@
 
         .commit, .merge-icon {
             
-            & text {
+            & text, & path {
                 animation: show 1s ease forwards;
             }
 
-            &.commit-1 > text {
+            &.commit-1 > text, &.commit-1 > path {
                 animation-delay: 0s;
             }
 
-            &.commit-2 > text {
+            &.commit-2 > text, &.commit-2 > path {
                 animation-delay: 2s;
             }
 
-            &.commit-3 > text {
+            &.commit-3 > text, &.commit-3 > path {
                 animation-delay: 5s;
             }
 
-            &.commit-4 > text {
+            &.commit-4 > text, &.commit-4 > path {
                 animation-delay: 7s;
             }
 
-            &.commit-5 > text {
+            &.commit-5 > text, &.commit-5 > path {
                 animation-delay: 9s;
             }
 
