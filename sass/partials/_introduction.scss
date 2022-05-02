@@ -74,30 +74,30 @@
             & > path {
                 stroke-dashoffset: 217px;
                 stroke-dasharray: 217px;
-                animation: draw 3s ease forwards;
+                animation: draw 1.5s ease forwards;
             }
 
             &.path-2 > path {
-                animation-delay: 2s;
+                animation-delay: 1s;
             }
 
             &.path-3 > path {
-                animation-delay: 5s;
+                animation-delay: 2.5s;
             }
 
             &.path-4 > path {
-                animation-delay: 7s;
+                animation-delay: 3.5s;
             }
 
             &.path-5 > path {
-                animation-delay: 9s;
+                animation-delay: 4.5s;
             }
         }
 
         .commit, .merge-icon {
             
             & text, & path {
-                animation: show 1s ease forwards;
+                animation: show 0.5s ease forwards;
             }
 
             &.commit-1 > text, &.commit-1 > path {
@@ -105,23 +105,23 @@
             }
 
             &.commit-2 > text, &.commit-2 > path {
-                animation-delay: 2s;
+                animation-delay: 1s;
             }
 
             &.commit-3 > text, &.commit-3 > path {
-                animation-delay: 5s;
+                animation-delay: 2.5s;
             }
 
             &.commit-4 > text, &.commit-4 > path {
-                animation-delay: 7s;
+                animation-delay: 3.5s;
             }
 
             &.commit-5 > text, &.commit-5 > path {
-                animation-delay: 9s;
+                animation-delay: 4.5s;
             }
 
             & > text {
-                animation-delay: 9.2s;
+                animation-delay: 4.7s;
             }
         }
 
