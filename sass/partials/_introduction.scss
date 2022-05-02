@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
     position: fixed;
     top: 0;
@@ -12,25 +12,12 @@
 
     h1 {
         align-self: flex-end;
+        padding: 1.5em 0;
     }
 
     svg {
-        // path.e {
-        //     fill: none;
-        //     stroke: red;
-        //     stroke-dashoffset: 216px;
-        //     stroke-dasharray: 216px;
-        //     stroke-miterlimit:10;
-        //     stroke-width:7px;
-        //     animation: line 3s ease forwards;
-
-        //     &:nth-of-type(1) {
-        //         stroke: green;
-        //     }
-        //     &path {
-        //         stroke: pink;
-        //     }
-        // }
+        
+        padding: 1.5em 0;
 
         .pull-request-icon {
             stroke: var(--accent-colour);
@@ -85,8 +72,8 @@
         .travel {
 
             & > path {
-                stroke-dashoffset: 216px;
-                stroke-dasharray: 216px;
+                stroke-dashoffset: 217px;
+                stroke-dasharray: 217px;
                 animation: draw 3s ease forwards;
             }
 
