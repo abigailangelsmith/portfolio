@@ -139,7 +139,7 @@ header nav > section {
   left: 0;
   width: calc(100vw - 10em); }
   #introduction h1 {
-    align-self: center;
+    align-self: flex-end;
     padding: 1.5em 0; }
   #introduction svg {
     padding: 1.5em 0; }
