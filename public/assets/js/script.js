@@ -2,20 +2,41 @@
     () => {
 
         // CONTENTFUL
-
-        const contentful = require("contentful");
-        const client = contentful.createClient({
-            // This is the space ID. A space is like a project folder in Contentful terms
-            space:,
-            // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-            accessToken: 
-        });
-
-        // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
-        client.getEntries
-        .then(entry => console.log(entry))
-        .catch(err => console.log(err));
-
+    
+        const query = `{
+            portfolioWorkCollection {
+                total
+                items {
+                    title
+                    description
+                    type
+                    url
+                    secondUrl
+                    repositoryLink
+                    technologyUsed
+                    display {
+                        url
+                    }
+                    preSelected
+                }
+            }
+        }`;
+        
+        const fetchOptions = {
+            spaceID: "i98swu3sb2vt",
+            accessToken: "G1qBTgDxffR6T0zuUayma0Z1kT-cIeWQ_CNPKMXDfZk",
+            method: "POST",
+            headers: {
+                Authorization: "Bearer G1qBTgDxffR6T0zuUayma0Z1kT-cIeWQ_CNPKMXDfZk",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ query })
+        }
+        
+        fetch("https://graphql.contentful.com/content/v1/spaces/i98swu3sb2vt/environments/master", fetchOptions) // Read-only API for Published Data
+            .then(response => response.json())
+            .then(data => console.log(data.data.portfolioWorkCollection.items));
+        
         // NAVIGATION
 
         // Get Elements

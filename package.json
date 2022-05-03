@@ -25,6 +25,7 @@
   "homepage": "https://github.com/abigailangelsmith/portfolio#readme",
   "dependencies": {
     "contentful": "^9.1.27",
+    "dotenv": "^16.0.0",
     "node-sass": "^7.0.1"
   }
 }
