@@ -18,6 +18,9 @@
                         url
                     }
                     preSelected
+                    sys {
+                        id
+                    }
                 }
             }
         }`;
@@ -35,7 +38,10 @@
         
         fetch("https://graphql.contentful.com/content/v1/spaces/i98swu3sb2vt/environments/master", fetchOptions) // Read-only API for Published Data
             .then(response => response.json())
-            .then(data => console.log(data.data.portfolioWorkCollection.items));
+            .then(data => {
+                // TODO: Call project section update functions
+                console.log(data.data.portfolioWorkCollection.items);
+            });
         
         // NAVIGATION
 
@@ -85,3 +91,33 @@
 
     }
 )();
+
+let projects = [];
+
+function updatePreSelectedProjectDisplay(project) {
+    
+    const projectId = project['sys']['id'];
+    projects[projectId] = project;
+
+
+}
+
+function buildProjectTileTemplate(project) {
+
+    const projectId = project['sys']['id'];
+    projects[projectId] = project;
+
+    let html = `<div class="project-tile" data-project-id="${projects[projectId]}">
+                [DISPLAY]
+                <div class="overlay"></div>
+                <div class="tech-used">
+                   [TECH_USED_SVGS]
+                </div>
+            </div>`;
+
+
+    // TODO: Check how to display autoplay screen record videos and determine if display file is video or an image
+
+    // TODO: Build tech used svgs and insert into template         
+
+}
