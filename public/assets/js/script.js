@@ -41,7 +41,8 @@
             .then(data => {
                 // TODO: Call project section update functions
                 console.log(data.data.portfolioWorkCollection.items);
-                updatePreSelectedProjectDisplay(data.data.portfolioWorkCollection.items[1]);
+                updatePreSelectedProjectDisplay(data.data.portfolioWorkCollection.items[0]);
+                buildProjectTileTemplate(data.data.portfolioWorkCollection.items[1]);
             });
         
         // NAVIGATION
@@ -93,7 +94,6 @@
     }
 )();
 
-
 const techSVGCodes = {
     'HTML': `<svg xmlns="http://www.w3.org/2000/svg" width="57.87" height="81.519" viewBox="0 0 57.87 81.519">
                 <path d="M17.825,12.722h3.37v3.691H24.88V5.391H21.194V9.033h-3.37V5.391H14.141V16.413h3.684Z" transform="translate(-8.832 -5.391)"/>
@@ -144,6 +144,8 @@ function updatePreSelectedProjectDisplay(project) {
     const projectId = project['sys']['id'];
     projects[projectId] = project;
 
+    document.querySelector('#work .project-hightlight').dataset.projectId = projectId;
+
     document.querySelector('#work .project-hightlight .project-highlight-display > img').src = project.display.url;
     document.querySelector('#work .project-hightlight .project-highlight-display > img').alt = project.title;
 
@@ -178,17 +180,22 @@ function buildProjectTileTemplate(project) {
     const projectId = project['sys']['id'];
     projects[projectId] = project;
 
-    let html = `<div class="project-tile" data-project-id="${projects[projectId]}">
-                [DISPLAY]
-                <div class="overlay"></div>
-                <div class="tech-used">
-                   [TECH_USED_SVGS]
-                </div>
-            </div>`;
+    let techUsedSVGs = '';
+
+    project.technologyUsed.forEach(tech => {
+        if (tech in techSVGCodes) {
+            techUsedSVGs += techSVGCodes[tech];
+        }
+    });
 
 
-    // TODO: Check how to display autoplay screen record videos and determine if display file is video or an image
+    let html = `<div class="project-tile" data-project-id="${projectId}">
+                    <img src="${project.display.url}" alt="${project.title}">
+                    <div class="overlay"></div>
+                    <div class="tech-used">
+                        ${techUsedSVGs}
+                    </div>
+                </div>`;
 
-    // TODO: Build tech used svgs and insert into template         
-
+    document.querySelector('#work .project-tiles').insertAdjacentHTML("beforeend", html);
 }

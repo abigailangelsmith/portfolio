@@ -293,8 +293,7 @@ header nav > section {
     cursor: pointer;
     z-index: 1; }
     #work .project-tile img {
-      width: 100%;
-      height: 100%; }
+      width: 100%; }
     #work .project-tile .overlay {
       height: 100%;
       width: 100%;
