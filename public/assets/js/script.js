@@ -41,8 +41,9 @@
             .then(data => {
                 // TODO: Call project section update functions
                 console.log(data.data.portfolioWorkCollection.items);
-                updatePreSelectedProjectDisplay(data.data.portfolioWorkCollection.items[0]);
+                updatePreSelectedProjectDisplay(data.data.portfolioWorkCollection.items[2]);
                 buildProjectTileTemplate(data.data.portfolioWorkCollection.items[1]);
+                buildProjectTileTemplate(data.data.portfolioWorkCollection.items[0]);
             });
         
         // NAVIGATION
@@ -158,6 +159,7 @@ function updatePreSelectedProjectDisplay(project) {
     if (project.url !== null) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').href = project.url;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website p').innerText = project.url;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "none";
     }
@@ -165,6 +167,7 @@ function updatePreSelectedProjectDisplay(project) {
     if (project.repositoryLink !== null) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').href = project.repositoryLink;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository p').innerText = project.repositoryLink;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "none";
     }
