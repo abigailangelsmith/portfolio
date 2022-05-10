@@ -39,11 +39,13 @@
         fetch("https://graphql.contentful.com/content/v1/spaces/i98swu3sb2vt/environments/master", fetchOptions) // Read-only API for Published Data
             .then(response => response.json())
             .then(data => {
-                // TODO: Call project section update functions
-                console.log(data.data.portfolioWorkCollection.items);
-                updatePreSelectedProjectDisplay(data.data.portfolioWorkCollection.items[2]);
-                buildProjectTileTemplate(data.data.portfolioWorkCollection.items[1]);
-                buildProjectTileTemplate(data.data.portfolioWorkCollection.items[0]);
+                data.data.portfolioWorkCollection.items.forEach(item => {
+                    if (item.preSelected) {
+                        updatePreSelectedProjectDisplay(item);
+                    } else {
+                        buildProjectTileTemplate(item);
+                    }
+                });
             });
         
         // NAVIGATION
