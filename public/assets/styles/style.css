@@ -293,14 +293,16 @@ header nav > section {
     cursor: pointer;
     z-index: 1; }
     #work .project-tile img {
-      width: 100%; }
+      width: 100%;
+      pointer-events: none; }
     #work .project-tile .overlay {
       height: 100%;
       width: 100%;
       background: var(--opacity-colour);
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      pointer-events: none; }
     #work .project-tile .tech-used {
       position: absolute;
       top: 50%;
@@ -310,7 +312,8 @@ header nav > section {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-content: space-around; }
+      align-content: space-around;
+      pointer-events: none; }
       #work .project-tile .tech-used svg {
         width: 2em;
         height: 2em;

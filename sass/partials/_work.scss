@@ -128,6 +128,7 @@
 
         img {
            width: 100%;
+           pointer-events: none;
         }
 
         .overlay {
@@ -137,6 +138,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            pointer-events: none;
         }
 
         .tech-used {
@@ -150,6 +152,7 @@
             flex-direction: column;
             flex-wrap: wrap;
             align-content: space-around;
+            pointer-events: none;
 
             svg {
                 width: 2em;

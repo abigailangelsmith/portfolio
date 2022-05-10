@@ -142,7 +142,10 @@ let projects = [];
 function updatePreSelectedProjectDisplay(project) {
     
     const projectId = project['sys']['id'];
-    projects[projectId] = project;
+
+    if (!(projectId in projects)) {
+        projects[projectId] = project;
+    }
 
     document.querySelector('#work .project-hightlight').dataset.projectId = projectId;
 
@@ -166,19 +169,22 @@ function updatePreSelectedProjectDisplay(project) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "none";
     }
 
+    document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').innerHTML = "";
+
     project.technologyUsed.forEach(tech => {
         if (tech in techSVGCodes) {
             document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').insertAdjacentHTML("beforeend", techSVGCodes[tech]);
         }
     });
-
-
 }
 
 function buildProjectTileTemplate(project) {
 
     const projectId = project['sys']['id'];
-    projects[projectId] = project;
+
+    if (!(projectId in projects)) {
+        projects[projectId] = project;
+    }
 
     let techUsedSVGs = '';
 
@@ -187,7 +193,6 @@ function buildProjectTileTemplate(project) {
             techUsedSVGs += techSVGCodes[tech];
         }
     });
-
 
     let html = `<div class="project-tile" data-project-id="${projectId}">
                     <img src="${project.display.url}" alt="${project.title}">
@@ -198,4 +203,17 @@ function buildProjectTileTemplate(project) {
                 </div>`;
 
     document.querySelector('#work .project-tiles').insertAdjacentHTML("beforeend", html);
+
+    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + projectId + '"]').addEventListener('click', switchHighlightedProject);
+}
+
+
+function switchHighlightedProject(event) {
+    let newlySelectedId = event.target.dataset.projectId;
+
+    let currentlyHighlightedId = document.querySelector('#work .project-hightlight').dataset.projectId;
+
+    event.target.remove();
+    updatePreSelectedProjectDisplay(projects[newlySelectedId]);
+    buildProjectTileTemplate(projects[currentlyHighlightedId]);
 }
