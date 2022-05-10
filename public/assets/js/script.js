@@ -240,6 +240,8 @@ function updatePreSelectedProjectDisplay(project) {
             document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').insertAdjacentHTML("beforeend", techSVGCodes[tech]);
         }
     });
+
+    return 'done';
 }
 
 function updateProjectTile(project, tileId) {
@@ -263,10 +265,17 @@ function updateProjectTile(project, tileId) {
 
 
 function switchHighlightedProject(event) {
-    let newlySelectedId = event.target.dataset.projectId;
 
+    let newlySelectedId = event.target.dataset.projectId;
     let currentlyHighlightedId = document.querySelector('#work .project-hightlight').dataset.projectId;
 
-    updatePreSelectedProjectDisplay(projects[newlySelectedId]);
-    updateProjectTile(projects[currentlyHighlightedId], newlySelectedId);
+    document.querySelector('#work .project-hightlight').style.opacity = 0;
+    event.target.style.opacity = 0;
+
+    setTimeout(() => {
+        updatePreSelectedProjectDisplay(projects[newlySelectedId]);
+        updateProjectTile(projects[currentlyHighlightedId], newlySelectedId);
+        document.querySelector('#work .project-hightlight').style.opacity = 1;
+        event.target.style.opacity = 1;
+    }, 500);
 }
