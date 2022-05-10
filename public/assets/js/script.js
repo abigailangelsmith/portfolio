@@ -50,21 +50,51 @@
         
         // NAVIGATION
 
-        // Get Elements
-        let navigationElements = document.querySelectorAll("nav a p");
+        function onScrollNavigationActiveToggle() {
 
-        function onClickNavigationActiveToggle(event) {
+            let trackedScrollPositions = {
+                introduction: 0,
+                work: document.querySelector('#introduction').getBoundingClientRect().height,
+                contact: document.querySelector('#introduction').getBoundingClientRect().height + document.querySelector('#work').getBoundingClientRect().height
+            };
+
+            let navigationItems = {
+                introduction: document.querySelector('header nav section:nth-of-type(1) a:nth-of-type(1) p'),
+                work: document.querySelector('header nav section:nth-of-type(1) a:nth-of-type(2) p'),
+                contact: document.querySelector('header nav section:nth-of-type(2) a:nth-of-type(1) p')
+            };
+
             let currentActive = document.querySelector("nav .active");
 
-            if (event.target !== currentActive) {
-                currentActive.classList.remove("active");
-                event.target.classList.add("active");
+            if (
+                scrollY >= trackedScrollPositions.introduction &&
+                scrollY < trackedScrollPositions.work &&
+                !navigationItems.introduction.classList.contains('active')
+            ) {
+                currentActive.classList.remove('active');
+                navigationItems.introduction.classList.add('active');
             }
+
+            if (
+                scrollY >= trackedScrollPositions.work &&
+                scrollY < trackedScrollPositions.contact &&
+                !navigationItems.work.classList.contains('active')
+            ) {
+                currentActive.classList.remove('active');
+                navigationItems.work.classList.add('active');
+            }
+
+            if (
+                scrollY >= trackedScrollPositions.contact &&
+                !navigationItems.contact.classList.contains('active')
+            ) {
+                currentActive.classList.remove('active');
+                navigationItems.contact.classList.add('active');
+            }
+
         }
 
-        navigationElements.forEach((element) => {
-            element.addEventListener('click', onClickNavigationActiveToggle);
-        });
+        window.addEventListener('scroll', onScrollNavigationActiveToggle);
 
         // COLOUR SCHEME
 
