@@ -229,8 +229,18 @@ header nav > section {
     margin-bottom: 3em; }
     #work section:nth-of-type(1) .project-highlight-display {
       border-radius: 20px;
-      overflow: hidden;
-      width: 60%; }
+      overflow-y: scroll;
+      overflow-x: hidden;
+      width: 60%;
+      height: 45vh;
+      background: var(--main-colour);
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */ }
+      #work section:nth-of-type(1) .project-highlight-display::-webkit-scrollbar {
+        width: 0;
+        height: 0; }
       #work section:nth-of-type(1) .project-highlight-display img {
         width: 100%; }
     #work section:nth-of-type(1) .project-highlight-information {
@@ -243,7 +253,8 @@ header nav > section {
         align-self: flex-end; }
         #work section:nth-of-type(1) .project-highlight-information .tech-used svg {
           height: 1.5em;
-          width: 1.5em; }
+          width: 1.5em;
+          padding-left: 0.5em; }
       #work section:nth-of-type(1) .project-highlight-information h2, #work section:nth-of-type(1) .project-highlight-information p {
         text-align: right; }
       #work section:nth-of-type(1) .project-highlight-information .project-links {
@@ -284,14 +295,15 @@ header nav > section {
     z-index: 1; }
     #work .project-tile img {
       width: 100%;
-      height: 100%; }
+      pointer-events: none; }
     #work .project-tile .overlay {
       height: 100%;
       width: 100%;
       background: var(--opacity-colour);
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      pointer-events: none; }
     #work .project-tile .tech-used {
       position: absolute;
       top: 50%;
@@ -301,7 +313,8 @@ header nav > section {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-content: space-around; }
+      align-content: space-around;
+      pointer-events: none; }
       #work .project-tile .tech-used svg {
         width: 2em;
         height: 2em;

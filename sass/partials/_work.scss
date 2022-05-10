@@ -28,8 +28,18 @@
 
         .project-highlight-display {
             border-radius: 20px;
-            overflow: hidden;
+            overflow-y: scroll;
+            overflow-x: hidden;
             width: 60%;
+            height: 45vh;
+            background: var(--main-colour);
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
 
             img {
                 width: 100%;
@@ -49,7 +59,7 @@
                 svg {
                     height: 1.5em;
                     width: 1.5em;
-                    
+                    padding-left: 0.5em;
                 }
             }
 
@@ -119,7 +129,7 @@
 
         img {
            width: 100%;
-           height: 100%;
+           pointer-events: none;
         }
 
         .overlay {
@@ -129,6 +139,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            pointer-events: none;
         }
 
         .tech-used {
@@ -142,6 +153,7 @@
             flex-direction: column;
             flex-wrap: wrap;
             align-content: space-around;
+            pointer-events: none;
 
             svg {
                 width: 2em;
