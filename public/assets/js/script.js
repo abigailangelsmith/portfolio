@@ -140,6 +140,35 @@ const techSVGCodes = {
 
 let projects = [];
 
+function buildProjectTileTemplate(project) {
+
+    const projectId = project['sys']['id'];
+
+    if (!(projectId in projects)) {
+        projects[projectId] = project;
+    }
+
+    let techUsedSVGs = '';
+
+    project.technologyUsed.forEach(tech => {
+        if (tech in techSVGCodes) {
+            techUsedSVGs += techSVGCodes[tech];
+        }
+    });
+
+    let html = `<div class="project-tile" data-project-id="${projectId}">
+                    <img src="${project.display.url}" alt="${project.title}">
+                    <div class="overlay"></div>
+                    <div class="tech-used">
+                        ${techUsedSVGs}
+                    </div>
+                </div>`;
+
+    document.querySelector('#work .project-tiles').insertAdjacentHTML("beforeend", html);
+
+    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + projectId + '"]').addEventListener('click', switchHighlightedProject);
+}
+
 function updatePreSelectedProjectDisplay(project) {
     
     const projectId = project['sys']['id'];
@@ -181,13 +210,7 @@ function updatePreSelectedProjectDisplay(project) {
     });
 }
 
-function buildProjectTileTemplate(project) {
-
-    const projectId = project['sys']['id'];
-
-    if (!(projectId in projects)) {
-        projects[projectId] = project;
-    }
+function updateProjectTile(project, tileId) {
 
     let techUsedSVGs = '';
 
@@ -197,17 +220,13 @@ function buildProjectTileTemplate(project) {
         }
     });
 
-    let html = `<div class="project-tile" data-project-id="${projectId}">
-                    <img src="${project.display.url}" alt="${project.title}">
-                    <div class="overlay"></div>
-                    <div class="tech-used">
-                        ${techUsedSVGs}
-                    </div>
-                </div>`;
+    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"] img').src = project.display.url;
+    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"] img').alt = project.title;
 
-    document.querySelector('#work .project-tiles').insertAdjacentHTML("beforeend", html);
+    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"] .tech-used').innerHTML = techUsedSVGs;
 
-    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + projectId + '"]').addEventListener('click', switchHighlightedProject);
+    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"]').dataset.projectId = project.sys.id;
+
 }
 
 
@@ -216,7 +235,6 @@ function switchHighlightedProject(event) {
 
     let currentlyHighlightedId = document.querySelector('#work .project-hightlight').dataset.projectId;
 
-    event.target.remove();
     updatePreSelectedProjectDisplay(projects[newlySelectedId]);
-    buildProjectTileTemplate(projects[currentlyHighlightedId]);
+    updateProjectTile(projects[currentlyHighlightedId], newlySelectedId);
 }
