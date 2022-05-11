@@ -129,6 +129,8 @@
             icon.addEventListener('click', onClickColourSchemeChange);
         });
 
+        headerIntroduction();
+
     }
 )();
 
@@ -268,7 +270,6 @@ function updateProjectTile(project, tileId) {
 
 }
 
-
 function switchHighlightedProject(event) {
 
     let newlySelectedId = event.target.dataset.projectId;
@@ -286,4 +287,12 @@ function switchHighlightedProject(event) {
         event.target.style.opacity = 1;
         document.querySelector('#work .project-tiles').style.pointerEvents = 'all';
     }, 500);
+}
+
+function headerIntroduction() {
+    setTimeout(() => {
+        document.querySelector('header nav').style.opacity = 1;
+        document.querySelector('header nav').style.pointerEvents = 'all';
+        document.querySelector('header nav').style.transition = 'opacity 1s';
+    }, 3000);
 }
