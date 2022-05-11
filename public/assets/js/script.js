@@ -39,6 +39,11 @@
         fetch("https://graphql.contentful.com/content/v1/spaces/i98swu3sb2vt/environments/master", fetchOptions) // Read-only API for Published Data
             .then(response => response.json())
             .then(data => {
+
+                if (data.data.portfolioWorkCollection.items.length === 0) {
+                    document.querySelector('#work .project-hightlight').innerHTML = `<h1>Projects coming soon...</h1>`;
+                }
+                
                 data.data.portfolioWorkCollection.items.forEach(item => {
                     if (item.preSelected) {
                         updatePreSelectedProjectDisplay(item);
@@ -240,6 +245,8 @@ function updatePreSelectedProjectDisplay(project) {
             document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').insertAdjacentHTML("beforeend", techSVGCodes[tech]);
         }
     });
+
+    return 'done';
 }
 
 function updateProjectTile(project, tileId) {
@@ -263,10 +270,20 @@ function updateProjectTile(project, tileId) {
 
 
 function switchHighlightedProject(event) {
-    let newlySelectedId = event.target.dataset.projectId;
 
+    let newlySelectedId = event.target.dataset.projectId;
     let currentlyHighlightedId = document.querySelector('#work .project-hightlight').dataset.projectId;
 
-    updatePreSelectedProjectDisplay(projects[newlySelectedId]);
-    updateProjectTile(projects[currentlyHighlightedId], newlySelectedId);
+    document.querySelector('#work .project-hightlight').style.opacity = 0;
+    event.target.style.opacity = 0;
+
+    document.querySelector('#work .project-tiles').style.pointerEvents = 'none';
+
+    setTimeout(() => {
+        updatePreSelectedProjectDisplay(projects[newlySelectedId]);
+        updateProjectTile(projects[currentlyHighlightedId], newlySelectedId);
+        document.querySelector('#work .project-hightlight').style.opacity = 1;
+        event.target.style.opacity = 1;
+        document.querySelector('#work .project-tiles').style.pointerEvents = 'all';
+    }, 500);
 }

@@ -226,7 +226,8 @@ header nav > section {
     grid-area: highlight;
     display: flex;
     padding-left: 2em;
-    margin-bottom: 3em; }
+    margin-bottom: 3em;
+    transition: opacity 0.5s; }
     #work section:nth-of-type(1) .project-highlight-display {
       border-radius: 20px;
       overflow-y: scroll;
@@ -292,7 +293,8 @@ header nav > section {
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-    z-index: 1; }
+    z-index: 1;
+    transition: opacity 0.5s; }
     #work .project-tile img {
       width: 100%;
       pointer-events: none; }
@@ -323,6 +325,12 @@ header nav > section {
           fill: var(--accent-colour); }
         #work .project-tile .tech-used svg:first-of-type {
           padding: 0; }
+
+@keyframes fadeInOut {
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 #contact {
   display: flex;
