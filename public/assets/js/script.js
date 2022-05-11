@@ -272,10 +272,13 @@ function switchHighlightedProject(event) {
     document.querySelector('#work .project-hightlight').style.opacity = 0;
     event.target.style.opacity = 0;
 
+    document.querySelector('#work .project-tiles').style.pointerEvents = 'none';
+
     setTimeout(() => {
         updatePreSelectedProjectDisplay(projects[newlySelectedId]);
         updateProjectTile(projects[currentlyHighlightedId], newlySelectedId);
         document.querySelector('#work .project-hightlight').style.opacity = 1;
         event.target.style.opacity = 1;
+        document.querySelector('#work .project-tiles').style.pointerEvents = 'all';
     }, 500);
 }
