@@ -38,11 +38,17 @@ header {
         }
     }
 
+    #flash-hello {
+        svg, h3 {
+            margin-top: 0;
+            animation: flashHello 1s forwards 3s;
+        }
+    }
+
     nav {
 
-        // TODO: Use to transition between states.
-        //opacity: 0;
-        //pointer-events: none;
+        opacity: 0;
+        pointer-events: none;
     
         p {
             position: relative;
@@ -130,6 +136,16 @@ header {
                 }
             }
         }
-
     }   
+
+    @keyframes flashHello {
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            margin-top: -300px;
+        }
+    }
 }

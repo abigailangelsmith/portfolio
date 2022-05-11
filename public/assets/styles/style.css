@@ -82,52 +82,62 @@ header #flash-hello, header nav {
       header #flash-hello > section:nth-of-type(even) h3, header #flash-hello > section:nth-of-type(even) p, header nav > section:nth-of-type(even) h3, header nav > section:nth-of-type(even) p {
         color: var(--main-colour); }
 
-header nav p {
-  position: relative; }
+header #flash-hello svg, header #flash-hello h3 {
+  margin-top: 0;
+  animation: flashHello 1s forwards 3s; }
 
-header nav p.active::after {
-  height: 1em;
-  width: 1em;
-  background-image: var(--accent-nav-arrow);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -1.5em;
-  content: ''; }
+header nav {
+  opacity: 0;
+  pointer-events: none; }
+  header nav p {
+    position: relative; }
+  header nav p.active::after {
+    height: 1em;
+    width: 1em;
+    background-image: var(--accent-nav-arrow);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.5em;
+    content: ''; }
+  header nav section:last-of-type p.active:after {
+    background-image: var(--main-nav-arrow); }
+  header nav > section {
+    grid-template-columns: 50% auto;
+    justify-items: center; }
+    header nav > section #colour-changing-options {
+      justify-self: end; }
+      header nav > section #colour-changing-options svg {
+        padding: 0 0.5em;
+        cursor: pointer; }
+        header nav > section #colour-changing-options svg path {
+          pointer-events: none; }
+        header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="filling-bucket"] {
+          fill: var(--p-t_main-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="filling-drop"] {
+          fill: var(--p-t_accent-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="outline"] {
+          fill: var(--main-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="filling-bucket"] {
+          fill: var(--o-b_main-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="filling-drop"] {
+          fill: var(--o-b_accent-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="outline"] {
+          fill: var(--main-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="filling-bucket"] {
+          fill: var(--b-ng_main-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="filling-drop"] {
+          fill: var(--b-ng_accent-colour); }
+        header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="outline"] {
+          fill: var(--main-colour); }
 
-header nav section:last-of-type p.active:after {
-  background-image: var(--main-nav-arrow); }
-
-header nav > section {
-  grid-template-columns: 50% auto;
-  justify-items: center; }
-  header nav > section #colour-changing-options {
-    justify-self: end; }
-    header nav > section #colour-changing-options svg {
-      padding: 0 0.5em;
-      cursor: pointer; }
-      header nav > section #colour-changing-options svg path {
-        pointer-events: none; }
-      header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="filling-bucket"] {
-        fill: var(--p-t_main-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="filling-drop"] {
-        fill: var(--p-t_accent-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="p-t"] path[data-name="outline"] {
-        fill: var(--main-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="filling-bucket"] {
-        fill: var(--o-b_main-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="filling-drop"] {
-        fill: var(--o-b_accent-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="o-b"] path[data-name="outline"] {
-        fill: var(--main-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="filling-bucket"] {
-        fill: var(--b-ng_main-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="filling-drop"] {
-        fill: var(--b-ng_accent-colour); }
-      header nav > section #colour-changing-options svg[data-scheme="b-ng"] path[data-name="outline"] {
-        fill: var(--main-colour); }
+@keyframes flashHello {
+  50% {
+    opacity: 0; }
+  100% {
+    margin-top: -300px; } }
 
 #introduction {
   display: flex;
