@@ -39,6 +39,11 @@
         fetch("https://graphql.contentful.com/content/v1/spaces/i98swu3sb2vt/environments/master", fetchOptions) // Read-only API for Published Data
             .then(response => response.json())
             .then(data => {
+
+                if (data.data.portfolioWorkCollection.items.length === 0) {
+                    document.querySelector('#work .project-hightlight').innerHTML = `<h1>Projects coming soon...</h1>`;
+                }
+                
                 data.data.portfolioWorkCollection.items.forEach(item => {
                     if (item.preSelected) {
                         updatePreSelectedProjectDisplay(item);
