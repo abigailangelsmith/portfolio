@@ -8,6 +8,8 @@
     h1 {
         align-self: flex-end;
         padding-bottom: 5em;
+        transition: opacity 1s;
+        opacity: 0;
     }
 
     svg {
@@ -17,6 +19,8 @@
     }
 
     #info {
+        transition: opacity 1s;
+        opacity: 0;
         display: flex;
         justify-content: space-around;
 
