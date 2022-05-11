@@ -4,10 +4,12 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    padding-top: 0;
+    padding-bottom: 100px;
 
     h1 {
         align-self: flex-end;
-        padding-bottom: 5em;
+        padding-bottom: 3em;
         transition: opacity 1s;
         opacity: 0;
     }
