@@ -124,8 +124,32 @@
         let picture = document.querySelector('#picture-of-me img');
         let colourSchemeIcons = document.querySelectorAll("#colour-changing-options > svg");
 
+        let storedColourScheme = sessionStorage.getItem('colourScheme');
+        if (storedColourScheme !== null) {
+            updateForStoredColourScheme(storedColourScheme);
+        }
+
+        function updateForStoredColourScheme(scheme) {
+            if (scheme == 'p-t') {
+                return;
+            }
+
+            let colourSchemeIcon = document.querySelector('#colour-changing-options svg[data-scheme="' + scheme + '"]');
+            colourSchemeIcon.dataset.scheme = 'p-t';
+
+            root.style.setProperty('--main-colour', 'var(--' + scheme + '_main-colour)');
+            root.style.setProperty('--accent-colour', 'var(--' + scheme + '_accent-colour)');
+            root.style.setProperty('--opacity-colour', 'var(--' + scheme + '_opacity-colour)');
+            root.style.setProperty('--main-nav-arrow', 'var(--' + scheme + '_main-nav-arrow)');
+            root.style.setProperty('--accent-nav-arrow', 'var(--' + scheme + '_accent-nav-arrow)');
+            
+            picture.src = '/public/assets/images/pictures/picture_' + scheme + '.png';
+            body.dataset.currentColourScheme = scheme;
+        }
+
         function onClickColourSchemeChange(event) {
             const scheme = event.target.dataset.scheme;
+            sessionStorage.setItem('colourScheme', scheme);
 
             root.style.setProperty('--main-colour', 'var(--' + scheme + '_main-colour)');
             root.style.setProperty('--accent-colour', 'var(--' + scheme + '_accent-colour)');

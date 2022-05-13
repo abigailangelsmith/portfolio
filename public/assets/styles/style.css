@@ -86,6 +86,9 @@ header #flash-hello svg, header #flash-hello h3 {
   margin-top: 0;
   animation: flashHello 1s forwards 3s; }
 
+header #flash-hello svg path {
+  stroke: var(--accent-colour); }
+
 header nav {
   opacity: 0;
   pointer-events: none; }

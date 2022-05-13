@@ -43,6 +43,10 @@ header {
             margin-top: 0;
             animation: flashHello 1s forwards 3s;
         }
+
+        svg path {
+            stroke: var(--accent-colour);
+        }
     }
 
     nav {
