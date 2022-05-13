@@ -80,6 +80,14 @@
                 navigationItems.introduction.classList.add('active');
             }
 
+            if (scrollY >= (trackedScrollPositions.work - 300)) {
+                let children = document.querySelector('#work').children;
+                
+                for (let element of children) {
+                    element.style.opacity = '1';
+                };
+            }
+
             if (
                 scrollY >= trackedScrollPositions.work &&
                 scrollY < trackedScrollPositions.contact &&
@@ -87,6 +95,14 @@
             ) {
                 currentActive.classList.remove('active');
                 navigationItems.work.classList.add('active');
+            }
+
+            if (scrollY >= (trackedScrollPositions.contact - 200)) {
+                let children = document.querySelector('#contact').children;
+                
+                for (let element of children) {
+                    element.style.opacity = '1';
+                };
             }
 
             if (

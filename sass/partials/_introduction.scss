@@ -11,13 +11,14 @@
     width: calc(100vw - 10em);
 
     h1 {
-        align-self: flex-end;
+        align-self: center;
         padding: 1.5em 0;
     }
 
     svg {
         
         padding: 1.5em 0;
+        margin-right: -6em;
 
         .pull-request-icon {
             stroke: var(--accent-colour);
@@ -75,22 +76,23 @@
                 stroke-dashoffset: 217px;
                 stroke-dasharray: 217px;
                 animation: draw 1.5s ease forwards;
+                animation-delay: 0.5s;
             }
 
             &.path-2 > path {
-                animation-delay: 1s;
+                animation-delay: 2s;
             }
 
             &.path-3 > path {
-                animation-delay: 2.5s;
+                animation-delay: 4s;
             }
 
             &.path-4 > path {
-                animation-delay: 3.5s;
+                animation-delay: 5.7s;
             }
 
             &.path-5 > path {
-                animation-delay: 4.5s;
+                animation-delay: 7s;
             }
         }
 
@@ -98,30 +100,31 @@
             
             & text, & path {
                 animation: show 0.5s ease forwards;
-            }
-
-            &.commit-1 > text, &.commit-1 > path {
-                animation-delay: 0s;
-            }
-
-            &.commit-2 > text, &.commit-2 > path {
                 animation-delay: 1s;
             }
 
-            &.commit-3 > text, &.commit-3 > path {
-                animation-delay: 2.5s;
+            &.commit-1 > text, &.commit-1 > path {
+                animation-delay: 0.5s;
             }
 
-            &.commit-4 > text, &.commit-4 > path {
+            &.commit-2 > text, &.commit-2 > path {
+                animation-delay: 1.5s;
+            }
+
+            &.commit-3 > text, &.commit-3 > path {
                 animation-delay: 3.5s;
             }
 
+            &.commit-4 > text, &.commit-4 > path {
+                animation-delay: 5s;
+            }
+
             &.commit-5 > text, &.commit-5 > path {
-                animation-delay: 4.5s;
+                animation-delay: 6.7s;
             }
 
             & > text {
-                animation-delay: 4.7s;
+                animation-delay: 6.5s;
             }
         }
 
