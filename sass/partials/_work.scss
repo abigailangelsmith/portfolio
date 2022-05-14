@@ -46,16 +46,36 @@
             background: var(--main-colour);
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            position: relative;
 
             &::-webkit-scrollbar {
                 width: 0;
                 height: 0;
             }
 
+            svg {
+                position: absolute;
+                bottom:10px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 20px;
+                background: var(--accent-colour);
+                padding: 0.5em;
+                animation: scrollSVGAnimation 0.5s ease-in-out forwards paused;
+                pointer-events: none;
+            }
+
             img {
                 width: 100%;
             }
         }
+
+        @keyframes scrollSVGAnimation {
+            to {
+                margin-bottom: -300px;
+                opacity: 0;
+            }
+        } 
 
         .project-highlight-information {
             display: flex;
