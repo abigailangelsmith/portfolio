@@ -277,12 +277,28 @@ header nav {
       scrollbar-width: none;
       /* Firefox */
       -ms-overflow-style: none;
-      /* Internet Explorer 10+ */ }
+      /* Internet Explorer 10+ */
+      position: relative; }
       #work > section:nth-of-type(1) .project-highlight-display::-webkit-scrollbar {
         width: 0;
         height: 0; }
+      #work > section:nth-of-type(1) .project-highlight-display svg {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        background: var(--accent-colour);
+        padding: 0.5em;
+        animation: scrollSVGAnimation 0.5s ease-in-out forwards paused;
+        pointer-events: none; }
       #work > section:nth-of-type(1) .project-highlight-display img {
         width: 100%; }
+
+@keyframes scrollSVGAnimation {
+  to {
+    margin-bottom: -300px;
+    opacity: 0; } }
     #work > section:nth-of-type(1) .project-highlight-information {
       display: flex;
       flex-direction: column;

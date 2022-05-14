@@ -117,6 +117,18 @@
 
         window.addEventListener('scroll', onScrollNavigationActiveToggle);
 
+        // PROJECT HIGHLIGHT SCROLL
+
+        function onScrollProjectHighlightAnimation(event) {
+            console.log(event.target.scrollTop);
+
+            if (event.target.scrollTop > 0) {
+                document.querySelector('#work .project-highlight-display svg').style.webkitAnimationPlayState = 'running';
+            }
+        }
+
+        document.querySelector('#work .project-highlight-display').addEventListener('scroll', onScrollProjectHighlightAnimation);
+
         // COLOUR SCHEME
 
         let root = document.documentElement;
