@@ -56,6 +56,22 @@ ul {
   ul li {
     list-style: none; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--accent-colour); }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--opacity-colour); }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--opacity-colour); }
+
 header #flash-hello, header nav {
   display: grid;
   grid-template-columns: 45% auto;
@@ -236,6 +252,8 @@ header nav {
   margin-top: 100vh;
   z-index: 1;
   position: relative; }
+  #work ::-webkit-scrollbar-thumb {
+    border-radius: 20px; }
   #work h1 {
     grid-area: heading;
     transition: opacity 1s;
