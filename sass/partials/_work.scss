@@ -1,5 +1,9 @@
 #work {
 
+    ::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+    }
+
     display: grid;
     grid-template-columns: 2fr 5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -26,7 +30,7 @@
         opacity: 0;
     }
  
-    section:nth-of-type(1) {
+    & > section:nth-of-type(1) {
         grid-area: highlight;
         display: flex;
         padding-left: 2em;
@@ -102,12 +106,23 @@
         }
     }
 
-    section:nth-of-type(2) {
+    & > section:nth-of-type(2) {
         grid-area: tiles;
 
         display: flex;
         justify-content: flex-start;
-        padding-left: 2em;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin-left: 2em;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        margin-right: 4em;
+
+        .project-tiles {
+            opacity: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
     }
 
     aside {
@@ -130,12 +145,16 @@
         height: 10em;
         width: 12em;
         margin-right: 5em;
-        margin-bottom: 5em;
+        margin-bottom: 1em;
         border-radius: 20px;
         overflow: hidden;
         cursor: pointer;
         z-index: 1;
         transition: opacity 0.5s;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         img {
            width: 100%;
