@@ -56,6 +56,22 @@ ul {
   ul li {
     list-style: none; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--accent-colour); }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--opacity-colour); }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--opacity-colour); }
+
 header #flash-hello, header nav {
   display: grid;
   grid-template-columns: 45% auto;
@@ -236,6 +252,8 @@ header nav {
   margin-top: 100vh;
   z-index: 1;
   position: relative; }
+  #work ::-webkit-scrollbar-thumb {
+    border-radius: 20px; }
   #work h1 {
     grid-area: heading;
     transition: opacity 1s;
@@ -243,13 +261,13 @@ header nav {
   #work section {
     transition: opacity 1s;
     opacity: 0; }
-  #work section:nth-of-type(1) {
+  #work > section:nth-of-type(1) {
     grid-area: highlight;
     display: flex;
     padding-left: 2em;
     margin-bottom: 3em;
     transition: opacity 0.5s; }
-    #work section:nth-of-type(1) .project-highlight-display {
+    #work > section:nth-of-type(1) .project-highlight-display {
       border-radius: 20px;
       overflow-y: scroll;
       overflow-x: hidden;
@@ -260,43 +278,52 @@ header nav {
       /* Firefox */
       -ms-overflow-style: none;
       /* Internet Explorer 10+ */ }
-      #work section:nth-of-type(1) .project-highlight-display::-webkit-scrollbar {
+      #work > section:nth-of-type(1) .project-highlight-display::-webkit-scrollbar {
         width: 0;
         height: 0; }
-      #work section:nth-of-type(1) .project-highlight-display img {
+      #work > section:nth-of-type(1) .project-highlight-display img {
         width: 100%; }
-    #work section:nth-of-type(1) .project-highlight-information {
+    #work > section:nth-of-type(1) .project-highlight-information {
       display: flex;
       flex-direction: column;
       padding: 0 5em 0 2em;
       width: 40%;
       justify-content: space-between; }
-      #work section:nth-of-type(1) .project-highlight-information .tech-used {
+      #work > section:nth-of-type(1) .project-highlight-information .tech-used {
         align-self: flex-end; }
-        #work section:nth-of-type(1) .project-highlight-information .tech-used svg {
+        #work > section:nth-of-type(1) .project-highlight-information .tech-used svg {
           height: 1.5em;
           width: 1.5em;
           padding-left: 0.5em; }
-      #work section:nth-of-type(1) .project-highlight-information h2, #work section:nth-of-type(1) .project-highlight-information p {
+      #work > section:nth-of-type(1) .project-highlight-information h2, #work > section:nth-of-type(1) .project-highlight-information p {
         text-align: right; }
-      #work section:nth-of-type(1) .project-highlight-information .project-links {
+      #work > section:nth-of-type(1) .project-highlight-information .project-links {
         padding-top: 6em; }
-        #work section:nth-of-type(1) .project-highlight-information .project-links a {
+        #work > section:nth-of-type(1) .project-highlight-information .project-links a {
           display: flex;
           align-items: center; }
-          #work section:nth-of-type(1) .project-highlight-information .project-links a:nth-of-type(1) {
+          #work > section:nth-of-type(1) .project-highlight-information .project-links a:nth-of-type(1) {
             padding-bottom: 1em; }
-          #work section:nth-of-type(1) .project-highlight-information .project-links a svg {
+          #work > section:nth-of-type(1) .project-highlight-information .project-links a svg {
             height: 1.5em;
             width: 1.5em; }
-          #work section:nth-of-type(1) .project-highlight-information .project-links a p {
+          #work > section:nth-of-type(1) .project-highlight-information .project-links a p {
             padding-left: 1em;
             text-align: left; }
-  #work section:nth-of-type(2) {
+  #work > section:nth-of-type(2) {
     grid-area: tiles;
     display: flex;
     justify-content: flex-start;
-    padding-left: 2em; }
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    margin-right: 4em; }
+    #work > section:nth-of-type(2) .project-tiles {
+      opacity: 1;
+      display: flex;
+      justify-content: flex-start; }
   #work aside {
     grid-area: tech;
     display: flex;
@@ -312,12 +339,14 @@ header nav {
     height: 10em;
     width: 12em;
     margin-right: 5em;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     z-index: 1;
     transition: opacity 0.5s; }
+    #work .project-tile:last-child {
+      margin-right: 0; }
     #work .project-tile img {
       width: 100%;
       pointer-events: none; }
