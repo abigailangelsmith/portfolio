@@ -9,14 +9,15 @@
                 items {
                     title
                     description
-                    type
                     url
-                    secondUrl
-                    repositoryLink
+                    secondaryUrl
+                    repositoryUrl
+                    projectManagementUrl
                     technologyUsed
                     display {
                         url
                     }
+                    realWorldProject
                     preSelected
                     sys {
                         id
@@ -43,10 +44,13 @@
                 if (data.data.portfolioWorkCollection.items.length === 0) {
                     document.querySelector('#work .project-hightlight').innerHTML = `<h1>Projects coming soon...</h1>`;
                 }
-                
+
+                console.log(data.data.portfolioWorkCollection.items);
+                let preSelectedChosen = false;
                 data.data.portfolioWorkCollection.items.forEach(item => {
-                    if (item.preSelected) {
+                    if (item.preSelected && preSelectedChosen === false) {
                         updatePreSelectedProjectDisplay(item);
+                        preSelectedChosen = true;
                     } else {
                         buildProjectTileTemplate(item);
                     }
@@ -120,8 +124,6 @@
         // PROJECT HIGHLIGHT SCROLL
 
         function onScrollProjectHighlightAnimation(event) {
-            console.log(event.target.scrollTop);
-
             if (event.target.scrollTop > 0) {
                 document.querySelector('#work .project-highlight-display svg').style.webkitAnimationPlayState = 'running';
             }
@@ -284,12 +286,28 @@ function updatePreSelectedProjectDisplay(project) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "none";
     }
 
-    if (project.repositoryLink !== null) {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').href = project.repositoryLink;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository p').innerText = project.repositoryLink;
+    if (project.secondaryUrl !== null) {
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').href = project.secondaryUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website p').innerText = project.secondaryUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').style.display = "flex";
+    } else {
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').style.display = "none";
+    }
+
+    if (project.repositoryUrl !== null) {
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').href = project.repositoryUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository p').innerText = project.repositoryUrl;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "none";
+    }
+
+    if (project.projectManagementUrl !== null) {
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').href = project.projectManagementUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management p').innerText = project.projectManagementUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').style.display = "flex";
+    } else {
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').style.display = "none";
     }
 
     document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').innerHTML = "";
