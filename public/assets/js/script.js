@@ -49,7 +49,6 @@
                     document.querySelector('#work .project-hightlight').innerHTML = `<h1>Projects coming soon...</h1>`;
                 }
 
-                console.log(data.data.portfolioWorkCollection.items);
                 let preSelectedChosen = false;
                 data.data.portfolioWorkCollection.items.forEach(item => {
                     if (item.preSelected && preSelectedChosen === false) {
@@ -275,6 +274,8 @@ function updatePreSelectedProjectDisplay(project) {
     }
 
     document.querySelector('#work .project-hightlight').dataset.projectId = projectId;
+
+    document.querySelector('#work .project-hightlight .project-highlight-display').scrollTop = 0;
 
     document.querySelector('#work .project-hightlight .project-highlight-display > img').src = project.display.url;
     document.querySelector('#work .project-hightlight .project-highlight-display > img').alt = project.title;
