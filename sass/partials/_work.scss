@@ -63,6 +63,8 @@
                 padding: 0.5em;
                 animation: scrollSVGAnimation 0.5s ease-in-out forwards paused;
                 pointer-events: none;
+                height: 3em;
+                width: 3em;
             }
 
             img {
@@ -72,7 +74,7 @@
 
         @keyframes scrollSVGAnimation {
             to {
-                margin-bottom: -300px;
+                bottom: -20px;
                 opacity: 0;
             }
         } 
@@ -100,15 +102,10 @@
 
             .project-links {
 
-                padding-top: 6em;
-
                 a {
                     display: flex;
                     align-items: center;
-
-                    &:nth-of-type(1) {
-                        padding-bottom: 1em;
-                    }
+                    padding-top: 1em;
 
                     svg {
                         height: 1.5em;
@@ -197,24 +194,22 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
+            height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            align-content: space-around;
+            align-content: center;
             pointer-events: none;
+            flex-wrap: wrap;
+            justify-content: center;
 
             svg {
                 width: 2em;
                 height: 2em;
-                padding: 1em 0 0 0;
+                padding: 1em;
 
                 path {
                     fill: var(--accent-colour);
-                }
-
-                &:first-of-type {
-                    padding: 0;
                 }
             }
         }
