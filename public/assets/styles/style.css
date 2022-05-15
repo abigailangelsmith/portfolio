@@ -171,7 +171,7 @@ header nav {
     align-self: center;
     padding: 1.5em 0; }
   #introduction svg {
-    padding: 1.5em 0;
+    padding: 0 0 1.5em 0;
     margin-right: -6em; }
     #introduction svg .pull-request-icon {
       stroke: var(--accent-colour);

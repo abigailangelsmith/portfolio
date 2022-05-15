@@ -105,7 +105,7 @@
                 navigationItems.work.classList.add('active');
             }
 
-            if (scrollY >= (trackedScrollPositions.contact - 200)) {
+            if (scrollY >= (trackedScrollPositions.contact - 300)) {
                 let children = document.querySelector('#contact').children;
                 
                 for (let element of children) {
