@@ -378,20 +378,20 @@ header nav {
       top: 50%;
       transform: translateY(-50%);
       left: 0;
+      height: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
+      align-content: center;
+      pointer-events: none;
       flex-wrap: wrap;
-      align-content: space-around;
-      pointer-events: none; }
+      justify-content: center; }
       #work .project-tile .tech-used svg {
         width: 2em;
         height: 2em;
-        padding: 1em 0 0 0; }
+        padding: 1em; }
         #work .project-tile .tech-used svg path {
           fill: var(--accent-colour); }
-        #work .project-tile .tech-used svg:first-of-type {
-          padding: 0; }
 
 @keyframes fadeInOut {
   50% {

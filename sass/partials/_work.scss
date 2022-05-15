@@ -194,24 +194,22 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
+            height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            align-content: space-around;
+            align-content: center;
             pointer-events: none;
+            flex-wrap: wrap;
+            justify-content: center;
 
             svg {
                 width: 2em;
                 height: 2em;
-                padding: 1em 0 0 0;
+                padding: 1em;
 
                 path {
                     fill: var(--accent-colour);
-                }
-
-                &:first-of-type {
-                    padding: 0;
                 }
             }
         }
