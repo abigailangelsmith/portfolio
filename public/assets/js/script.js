@@ -10,9 +10,13 @@
                     title
                     description
                     url
+                    urlName
                     secondaryUrl
+                    secondaryUrlName
                     repositoryUrl
+                    repositoryUrlName
                     projectManagementUrl
+                    projectManagementUrlName
                     technologyUsed
                     display {
                         url
@@ -280,7 +284,7 @@ function updatePreSelectedProjectDisplay(project) {
 
     if (project.url !== null) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').href = project.url;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website p').innerText = project.url;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website p').innerText = project.urlName;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "none";
@@ -288,7 +292,7 @@ function updatePreSelectedProjectDisplay(project) {
 
     if (project.secondaryUrl !== null) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').href = project.secondaryUrl;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website p').innerText = project.secondaryUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website p').innerText = project.secondaryUrlName;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').style.display = "none";
@@ -296,7 +300,7 @@ function updatePreSelectedProjectDisplay(project) {
 
     if (project.repositoryUrl !== null) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').href = project.repositoryUrl;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository p').innerText = project.repositoryUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository p').innerText = project.repositoryUrlName;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "none";
@@ -304,7 +308,7 @@ function updatePreSelectedProjectDisplay(project) {
 
     if (project.projectManagementUrl !== null) {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').href = project.projectManagementUrl;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management p').innerText = project.projectManagementUrl;
+        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management p').innerText = project.projectManagementUrlName;
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').style.display = "flex";
     } else {
         document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').style.display = "none";

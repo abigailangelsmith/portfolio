@@ -291,13 +291,15 @@ header nav {
         background: var(--accent-colour);
         padding: 0.5em;
         animation: scrollSVGAnimation 0.5s ease-in-out forwards paused;
-        pointer-events: none; }
+        pointer-events: none;
+        height: 3em;
+        width: 3em; }
       #work > section:nth-of-type(1) .project-highlight-display img {
         width: 100%; }
 
 @keyframes scrollSVGAnimation {
   to {
-    margin-bottom: -300px;
+    bottom: -20px;
     opacity: 0; } }
     #work > section:nth-of-type(1) .project-highlight-information {
       display: flex;
@@ -313,18 +315,16 @@ header nav {
           padding-left: 0.5em; }
       #work > section:nth-of-type(1) .project-highlight-information h2, #work > section:nth-of-type(1) .project-highlight-information p {
         text-align: right; }
-      #work > section:nth-of-type(1) .project-highlight-information .project-links {
-        padding-top: 6em; }
-        #work > section:nth-of-type(1) .project-highlight-information .project-links a {
-          display: flex;
-          align-items: center;
-          padding-bottom: 1em; }
-          #work > section:nth-of-type(1) .project-highlight-information .project-links a svg {
-            height: 1.5em;
-            width: 1.5em; }
-          #work > section:nth-of-type(1) .project-highlight-information .project-links a p {
-            padding-left: 1em;
-            text-align: left; }
+      #work > section:nth-of-type(1) .project-highlight-information .project-links a {
+        display: flex;
+        align-items: center;
+        padding-top: 1em; }
+        #work > section:nth-of-type(1) .project-highlight-information .project-links a svg {
+          height: 1.5em;
+          width: 1.5em; }
+        #work > section:nth-of-type(1) .project-highlight-information .project-links a p {
+          padding-left: 1em;
+          text-align: left; }
   #work > section:nth-of-type(2) {
     grid-area: tiles;
     display: flex;
