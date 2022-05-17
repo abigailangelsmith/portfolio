@@ -102,8 +102,16 @@ header #flash-hello svg, header #flash-hello h3 {
   margin-top: 0;
   animation: flashHello 1s forwards 3s; }
 
-header #flash-hello svg path {
+header #flash-hello section > svg path {
   stroke: var(--accent-colour); }
+
+header #flash-hello section#mobile-nav-icon {
+  display: none;
+  pointer-events: none; }
+  header #flash-hello section#mobile-nav-icon svg {
+    animation: none; }
+    header #flash-hello section#mobile-nav-icon svg path {
+      stroke: var(--main-colour); }
 
 header nav {
   opacity: 0;
@@ -488,3 +496,15 @@ footer {
         padding-right: 3em; }
       footer > div:nth-of-type(odd) svg {
         height: 3em; }
+
+@media (max-width: 1900px) {
+  header #flash-hello {
+    opacity: 1;
+    grid-template-columns: 100px auto 100px; }
+    header #flash-hello svg, header #flash-hello h3 {
+      animation: none; }
+    header #flash-hello section#mobile-nav-icon {
+      display: inline-block;
+      background-color: var(--accent-colour); }
+  header nav {
+    margin-top: 100px; } }

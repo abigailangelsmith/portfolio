@@ -44,8 +44,21 @@ header {
             animation: flashHello 1s forwards 3s;
         }
 
-        svg path {
+        section > svg path {
             stroke: var(--accent-colour);
+        }
+
+        section#mobile-nav-icon {
+            display: none;
+            pointer-events: none;
+
+            svg {
+                animation: none;
+
+                path {
+                    stroke: var(--main-colour);
+                }
+            }
         }
     }
 

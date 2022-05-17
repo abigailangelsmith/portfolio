@@ -1,0 +1,24 @@
+@media (max-width: 1900px) {
+
+    header {
+        #flash-hello {
+            opacity: 1;
+            grid-template-columns: 100px auto 100px;
+
+            svg, h3 {
+                animation: none;
+            }
+
+            section#mobile-nav-icon {
+                display: inline-block;
+                background-color: var(--accent-colour);
+            }
+        }
+        
+        nav {
+            margin-top: 100px;
+
+        }
+    }
+    
+}
