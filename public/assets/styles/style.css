@@ -504,7 +504,32 @@ footer {
     header #flash-hello svg, header #flash-hello h3 {
       animation: none; }
     header #flash-hello section#mobile-nav-icon {
-      display: inline-block;
+      display: flex;
       background-color: var(--accent-colour); }
   header nav {
-    margin-top: 100px; } }
+    margin-top: 100px;
+    grid-template-columns: auto;
+    height: fit-content;
+    width: 50%;
+    right: 0;
+    border-bottom: 5px solid var(--main-colour); }
+    header nav section:last-of-type p.active:after {
+      background-image: var(--accent-nav-arrow); }
+    header nav p.active::after {
+      left: 0px;
+      transform: translateY(50%) rotate(90deg);
+      bottom: 50%; }
+    header nav > section {
+      grid-template-columns: auto;
+      padding: 0; }
+      header nav > section p {
+        padding: 2em; }
+      header nav > section #colour-changing-options {
+        padding: 1em 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--accent-colour); }
+      header nav > section:nth-of-type(even) {
+        background-color: var(--main-colour); }
+        header nav > section:nth-of-type(even) p {
+          color: var(--accent-colour); } }
