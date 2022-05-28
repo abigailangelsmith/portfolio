@@ -498,6 +498,9 @@ footer {
         height: 3em; }
 
 @media (max-width: 1900px) {
+  body section {
+    padding-left: 1em;
+    padding-right: 1em; }
   header #flash-hello {
     opacity: 1;
     grid-template-columns: 100px auto 100px; }
@@ -510,9 +513,10 @@ footer {
     margin-top: 100px;
     grid-template-columns: auto;
     height: fit-content;
-    width: 50%;
+    width: 100%;
     right: 0;
-    border-bottom: 5px solid var(--main-colour); }
+    border-bottom: 5px solid var(--main-colour);
+    width: 0; }
     header nav section:last-of-type p.active:after {
       background-image: var(--accent-nav-arrow); }
     header nav p.active::after {
@@ -532,4 +536,76 @@ footer {
       header nav > section:nth-of-type(even) {
         background-color: var(--main-colour); }
         header nav > section:nth-of-type(even) p {
-          color: var(--accent-colour); } }
+          color: var(--accent-colour); }
+  #introduction {
+    width: calc(100% - 2em);
+    justify-content: space-evenly; }
+    #introduction svg {
+      margin: 0; }
+  #work {
+    height: auto;
+    width: calc(100% - 2em);
+    grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    padding: 1em;
+    text-align: center; }
+    #work aside {
+      display: none; }
+    #work > section:nth-of-type(1) {
+      flex-direction: column;
+      margin-bottom: 1em; }
+      #work > section:nth-of-type(1) .project-highlight-display {
+        width: 100%; }
+      #work > section:nth-of-type(1) .project-highlight-information {
+        padding: 1em 0;
+        width: 100%;
+        align-items: flex-start; }
+        #work > section:nth-of-type(1) .project-highlight-information .tech-used {
+          align-self: flex-start;
+          padding-bottom: 1em; }
+        #work > section:nth-of-type(1) .project-highlight-information h2, #work > section:nth-of-type(1) .project-highlight-information p {
+          text-align: left;
+          padding-bottom: 1em; }
+        #work > section:nth-of-type(1) .project-highlight-information .project-links a {
+          align-items: flex-start; }
+    #work > section:nth-of-type(2) {
+      padding: 0;
+      margin-left: 0;
+      margin-right: 0; }
+      #work > section:nth-of-type(2) .project-tiles {
+        padding: 0; }
+    #work .project-tile {
+      margin-right: 2em; }
+  #contact {
+    height: auto;
+    width: calc(100% - 2em);
+    padding-bottom: 0; }
+    #contact h1 {
+      align-self: center;
+      padding: 3em 0; }
+    #contact #info {
+      flex-direction: column; }
+      #contact #info section a {
+        padding-bottom: 2em; }
+      #contact #info aside {
+        flex-direction: column; }
+        #contact #info aside #picture-of-me {
+          text-align: center; }
+          #contact #info aside #picture-of-me svg:nth-of-type(1) {
+            left: -3px; }
+          #contact #info aside #picture-of-me svg:nth-of-type(2) {
+            left: 4px; }
+          #contact #info aside #picture-of-me svg:nth-of-type(3) {
+            right: 20px; }
+          #contact #info aside #picture-of-me svg:nth-of-type(4) {
+            right: 2px; }
+          #contact #info aside #picture-of-me svg:nth-of-type(5) {
+            right: 78px; }
+        #contact #info aside #extra-info div {
+          padding-left: 1em; }
+  footer > div:nth-of-type(odd) {
+    flex-direction: column;
+    padding: 1em 2em; }
+    footer > div:nth-of-type(odd) h3 {
+      padding-right: 0;
+      padding-bottom: 1em; } }
