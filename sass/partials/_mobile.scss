@@ -126,13 +126,12 @@
         }
 
         & > section:nth-of-type(2) {
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
+            margin-left: 0;
+            margin-right: 0;
 
-        .project-tiles {
-            padding: 0;
-        }
+            .project-tiles {
+                padding: 0;
+            }
         }
 
         .project-tile {
