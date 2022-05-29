@@ -62,25 +62,31 @@
 
         // MOBILE NAVIGATION
 
-        function onClickMobileNavigationOptionClose() {
+        function mobileNavigationOpen() {
+            document.querySelector('nav').style.opacity = 1;
+            document.querySelector('nav').style.pointerEvents = 'all';
+        }
+
+        function mobileNavigationClose() {
             document.querySelector('nav').style.opacity = 0;
             document.querySelector('nav').style.pointerEvents = 'none';
         }
 
-        if (window.getComputedStyle(document.querySelector('#mobile-nav-icon')).display !== 'none') {
+        function isMobileNavigationOpen() {
+            return window.getComputedStyle(document.querySelector('nav')).opacity !== '0';
+        }
+
+        if (isMobileNavigationIconShowing) {
             document.querySelectorAll('nav p').forEach((navItem) => {
-                navItem.addEventListener('click', onClickMobileNavigationOptionClose);
+                navItem.addEventListener('click', mobileNavigationClose);
             });
         }
 
         function onClickMobileNavigationToggle() {
-            console.log('ticked');
-            if (document.querySelector('nav').style.opacity == 0) {
-                document.querySelector('nav').style.opacity = 1;
-                document.querySelector('nav').style.pointerEvents = 'all';
+            if (isMobileNavigationOpen()) {
+                mobileNavigationClose();
             } else {
-                document.querySelector('nav').style.opacity = 0;
-                document.querySelector('nav').style.pointerEvents = 'none';
+                mobileNavigationOpen();
             }
         }
 
@@ -262,6 +268,10 @@ const techSVGCodes = {
 
 let projects = [];
 
+function isMobileNavigationIconShowing() {
+    return window.getComputedStyle(document.querySelector('#mobile-nav-icon')).display !== 'none';
+}
+
 function buildProjectTileTemplate(project) {
 
     const projectId = project['sys']['id'];
@@ -299,57 +309,70 @@ function updatePreSelectedProjectDisplay(project) {
         projects[projectId] = project;
     }
 
-    document.querySelector('#work .project-hightlight').dataset.projectId = projectId;
+    let classList = {
+        projectHighlight: {
+            highlight: '#work .project-hightlight',
+            display: '#work .project-hightlight .project-highlight-display',
+            information: '#work .project-hightlight .project-highlight-information',
+            techUsed: '#work .project-hightlight .project-highlight-information .tech-used'
+        },
+        projectLinks: {
+            website: '#work .project-hightlight .project-highlight-information .project-links .website',
+            secondWebsite: '#work .project-hightlight .project-highlight-information .project-links .second-website',
+            repository: '#work .project-hightlight .project-highlight-information .project-links .repository',
+            projectManagement: '#work .project-hightlight .project-highlight-information .project-links .project-management',
 
-    document.querySelector('#work .project-hightlight .project-highlight-display').scrollTop = 0;
+        }
+    }
 
-    document.querySelector('#work .project-hightlight .project-highlight-display > img').src = project.display.url;
-    document.querySelector('#work .project-hightlight .project-highlight-display > img').alt = project.title;
+    document.querySelector(classList.projectHighlight.highlight).dataset.projectId = projectId;
 
-    document.querySelector('#work .project-hightlight .project-highlight-information > h2').innerText = project.title;
-    document.querySelector('#work .project-hightlight .project-highlight-information > p').innerText = project.description;
+    document.querySelector(classList.projectHighlight.display).scrollTop = 0;
+    document.querySelector(classList.projectHighlight.display + ' > img').src = project.display.url;
+    document.querySelector(classList.projectHighlight.display + ' > img').alt = project.title;
+
+    document.querySelector(classList.projectHighlight.information + ' > h2').innerText = project.title;
+    document.querySelector(classList.projectHighlight.information + ' > p').innerText = project.description;
 
     if (project.url !== null) {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').href = project.url;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website p').innerText = project.urlName;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "flex";
+        document.querySelector(classList.projectLinks.website).href = project.url;
+        document.querySelector(classList.projectLinks.website).style.display = "flex";
+        document.querySelector(classList.projectLinks.website + ' p').innerText = project.urlName;       
     } else {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .website').style.display = "none";
+        document.querySelector(classList.projectLinks.website).style.display = "none";
     }
 
     if (project.secondaryUrl !== null) {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').href = project.secondaryUrl;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website p').innerText = project.secondaryUrlName;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').style.display = "flex";
+        document.querySelector(classList.projectLinks.secondWebsite).href = project.secondaryUrl;
+        document.querySelector(classList.projectLinks.secondWebsite).style.display = "flex";
+        document.querySelector(classList.projectLinks.secondWebsite + ' p').innerText = project.secondaryUrlName;
     } else {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .second-website').style.display = "none";
+        document.querySelector(classList.projectLinks.secondWebsite).style.display = "none";
     }
 
     if (project.repositoryUrl !== null) {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').href = project.repositoryUrl;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository p').innerText = project.repositoryUrlName;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "flex";
+        document.querySelector(classList.projectLinks.repository).href = project.repositoryUrl;
+        document.querySelector(classList.projectLinks.repository).style.display = "flex";
+        document.querySelector(classList.projectLinks.repository + ' p').innerText = project.repositoryUrlName;
     } else {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .repository').style.display = "none";
+        document.querySelector(classList.projectLinks.repository).style.display = "none";
     }
 
     if (project.projectManagementUrl !== null) {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').href = project.projectManagementUrl;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management p').innerText = project.projectManagementUrlName;
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').style.display = "flex";
+        document.querySelector(classList.projectLinks.projectManagement).href = project.projectManagementUrl;
+        document.querySelector(classList.projectLinks.projectManagement).style.display = "flex";
+        document.querySelector(classList.projectLinks.projectManagement + ' p').innerText = project.projectManagementUrlName;
     } else {
-        document.querySelector('#work .project-hightlight .project-highlight-information .project-links .project-management').style.display = "none";
+        document.querySelector(classList.projectLinks.projectManagement).style.display = "none";
     }
 
-    document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').innerHTML = "";
+    document.querySelector(classList.projectHighlight.techUsed).innerHTML = "";
 
     project.technologyUsed.forEach(tech => {
         if (tech in techSVGCodes) {
-            document.querySelector('#work .project-hightlight .project-highlight-information .tech-used').insertAdjacentHTML("beforeend", techSVGCodes[tech]);
+            document.querySelector(classList.projectHighlight.techUsed).insertAdjacentHTML("beforeend", techSVGCodes[tech]);
         }
     });
-
-    return 'done';
 }
 
 function updateProjectTile(project, tileId) {
@@ -362,13 +385,14 @@ function updateProjectTile(project, tileId) {
         }
     });
 
-    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"] img').src = project.display.url;
-    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"] img').alt = project.title;
+    let tileClass = '#work .project-tiles .project-tile[data-project-id="' + tileId + '"]';
 
-    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"] .tech-used').innerHTML = techUsedSVGs;
+    document.querySelector(tileClass + ' img').src = project.display.url;
+    document.querySelector(tileClass + ' img').alt = project.title;
 
-    document.querySelector('#work .project-tiles .project-tile[data-project-id="' + tileId + '"]').dataset.projectId = project.sys.id;
+    document.querySelector(tileClass + ' .tech-used').innerHTML = techUsedSVGs;
 
+    document.querySelector(tileClass).dataset.projectId = project.sys.id;
 }
 
 function switchHighlightedProject(event) {
@@ -392,7 +416,7 @@ function switchHighlightedProject(event) {
 
 function headerIntroduction() {
     setTimeout(() => {
-        if (window.getComputedStyle(document.querySelector('#mobile-nav-icon')).display === 'none') {
+        if (!isMobileNavigationIconShowing()) {
             document.querySelector('header nav').style.opacity = 1;
             document.querySelector('header nav').style.pointerEvents = 'all';
             document.querySelector('header nav').style.transition = 'opacity 1s';
