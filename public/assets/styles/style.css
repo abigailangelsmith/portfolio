@@ -178,69 +178,70 @@ header nav {
   #introduction h1 {
     align-self: center;
     padding: 1.5em 0; }
-  #introduction svg {
-    padding: 0 0 1.5em 0;
-    margin-right: -6em; }
-    #introduction svg .pull-request-icon {
+  #introduction svg.mobile-svg {
+    display: none; }
+  #introduction svg.desktop-svg {
+    padding: 0 0 1.5em 0; }
+    #introduction svg.desktop-svg .pull-request-icon {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
       stroke-width: 7px; }
-    #introduction svg .pull-request-icon .circle, #introduction svg .pull-request-icon .arrow-head {
+    #introduction svg.desktop-svg .pull-request-icon .circle, #introduction svg.desktop-svg .pull-request-icon .arrow-head {
       stroke: none;
       fill: var(--accent-colour); }
-    #introduction svg .merge-icon {
+    #introduction svg.desktop-svg .merge-icon {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
       stroke-width: 7px; }
-    #introduction svg .merge-icon .circle {
+    #introduction svg.desktop-svg .merge-icon .circle {
       stroke: none;
       fill: var(--accent-colour); }
-    #introduction svg .pull-request-icon .text, #introduction svg .merge-icon .text {
+    #introduction svg.desktop-svg .pull-request-icon .text, #introduction svg.desktop-svg .merge-icon .text {
       stroke: none; }
-    #introduction svg .travel {
+    #introduction svg.desktop-svg .travel {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
       stroke-width: 7px; }
-    #introduction svg .travel path {
+    #introduction svg.desktop-svg .travel path {
       fill: none; }
-    #introduction svg .commit path {
+    #introduction svg.desktop-svg .commit path {
       stroke: none;
       fill: var(--accent-colour);
       opacity: 0; }
-    #introduction svg .text {
+    #introduction svg.desktop-svg .text {
       font-family: AutomateOT-Bold, Automate OT;
       font-size: 14px;
       fill: var(--accent-colour);
       opacity: 0; }
-    #introduction svg .pull-request-icon .text {
+    #introduction svg.desktop-svg .pull-request-icon .text {
       opacity: 1; }
-    #introduction svg .travel > path {
+    #introduction svg.desktop-svg .travel > path {
       stroke-dashoffset: 217px;
       stroke-dasharray: 217px;
       animation: draw 1.5s ease forwards;
       animation-delay: 0.5s; }
-    #introduction svg .travel.path-2 > path {
+    #introduction svg.desktop-svg .travel.path-2 > path {
       animation-delay: 2s; }
-    #introduction svg .travel.path-3 > path {
+    #introduction svg.desktop-svg .travel.path-3 > path {
       animation-delay: 4s; }
-    #introduction svg .travel.path-4 > path {
+    #introduction svg.desktop-svg .travel.path-4 > path {
       animation-delay: 5.7s; }
-    #introduction svg .travel.path-5 > path {
+    #introduction svg.desktop-svg .travel.path-5 > path {
       animation-delay: 7s; }
-    #introduction svg .commit text, #introduction svg .commit path, #introduction svg .merge-icon text, #introduction svg .merge-icon path {
+    #introduction svg.desktop-svg .commit text, #introduction svg.desktop-svg .commit path, #introduction svg.desktop-svg .merge-icon text, #introduction svg.desktop-svg .merge-icon path {
       animation: show 0.5s ease forwards;
       animation-delay: 1s; }
-    #introduction svg .commit.commit-1 > text, #introduction svg .commit.commit-1 > path, #introduction svg .merge-icon.commit-1 > text, #introduction svg .merge-icon.commit-1 > path {
+    #introduction svg.desktop-svg .commit.commit-1 > text, #introduction svg.desktop-svg .commit.commit-1 > path, #introduction svg.desktop-svg .merge-icon.commit-1 > text, #introduction svg.desktop-svg .merge-icon.commit-1 > path {
       animation-delay: 0.5s; }
-    #introduction svg .commit.commit-2 > text, #introduction svg .commit.commit-2 > path, #introduction svg .merge-icon.commit-2 > text, #introduction svg .merge-icon.commit-2 > path {
+    #introduction svg.desktop-svg .commit.commit-2 > text, #introduction svg.desktop-svg .commit.commit-2 > path, #introduction svg.desktop-svg .merge-icon.commit-2 > text, #introduction svg.desktop-svg .merge-icon.commit-2 > path {
       animation-delay: 1.5s; }
-    #introduction svg .commit.commit-3 > text, #introduction svg .commit.commit-3 > path, #introduction svg .merge-icon.commit-3 > text, #introduction svg .merge-icon.commit-3 > path {
+    #introduction svg.desktop-svg .commit.commit-3 > text, #introduction svg.desktop-svg .commit.commit-3 > path, #introduction svg.desktop-svg .merge-icon.commit-3 > text, #introduction svg.desktop-svg .merge-icon.commit-3 > path {
       animation-delay: 3.5s; }
-    #introduction svg .commit.commit-4 > text, #introduction svg .commit.commit-4 > path, #introduction svg .merge-icon.commit-4 > text, #introduction svg .merge-icon.commit-4 > path {
+    #introduction svg.desktop-svg .commit.commit-4 > text, #introduction svg.desktop-svg .commit.commit-4 > path, #introduction svg.desktop-svg .merge-icon.commit-4 > text, #introduction svg.desktop-svg .merge-icon.commit-4 > path {
       animation-delay: 5s; }
-    #introduction svg .commit.commit-5 > text, #introduction svg .commit.commit-5 > path, #introduction svg .merge-icon.commit-5 > text, #introduction svg .merge-icon.commit-5 > path {
+    #introduction svg.desktop-svg .commit.commit-5 > text, #introduction svg.desktop-svg .commit.commit-5 > path, #introduction svg.desktop-svg .merge-icon.commit-5 > text, #introduction svg.desktop-svg .merge-icon.commit-5 > path {
       animation-delay: 6.7s; }
-    #introduction svg .commit > text, #introduction svg .merge-icon > text {
+    #introduction svg.desktop-svg .commit > text, #introduction svg.desktop-svg .merge-icon > text {
       animation-delay: 6.5s; }
 
 @keyframes draw {
@@ -535,13 +536,77 @@ footer {
           color: var(--accent-colour); }
   #introduction {
     width: calc(100% - 2em);
-    justify-content: space-evenly; }
-    #introduction svg {
-      margin: 0; }
+    justify-content: center; }
+    #introduction svg.desktop-svg {
+      display: none; }
+    #introduction svg.mobile-svg {
+      display: inherit;
+      padding: 0 0 1.5em 0; }
+      #introduction svg.mobile-svg .pull-request-icon {
+        stroke: var(--accent-colour);
+        stroke-miterlimit: 10;
+        stroke-width: 7px; }
+      #introduction svg.mobile-svg .pull-request-icon .circle, #introduction svg.mobile-svg .pull-request-icon .arrow-head {
+        stroke: none;
+        fill: var(--accent-colour); }
+      #introduction svg.mobile-svg .merge-icon {
+        stroke: var(--accent-colour);
+        stroke-miterlimit: 10;
+        stroke-width: 7px; }
+      #introduction svg.mobile-svg .merge-icon .circle {
+        stroke: none;
+        fill: var(--accent-colour); }
+      #introduction svg.mobile-svg .pull-request-icon .text, #introduction svg.mobile-svg .merge-icon .text {
+        stroke: none; }
+      #introduction svg.mobile-svg .travel {
+        stroke: var(--accent-colour);
+        stroke-miterlimit: 10;
+        stroke-width: 7px; }
+      #introduction svg.mobile-svg .travel path {
+        fill: none; }
+      #introduction svg.mobile-svg .commit path {
+        stroke: none;
+        fill: var(--accent-colour);
+        opacity: 0; }
+      #introduction svg.mobile-svg .text {
+        font-family: AutomateOT-Bold, Automate OT;
+        font-size: 14px;
+        fill: var(--accent-colour);
+        opacity: 0; }
+      #introduction svg.mobile-svg .pull-request-icon .text {
+        opacity: 1; }
+      #introduction svg.mobile-svg .travel > path {
+        stroke-dashoffset: 38px;
+        stroke-dasharray: 38px;
+        animation: draw 1.5s ease forwards;
+        animation-delay: 0.5s; }
+      #introduction svg.mobile-svg .travel.path-2 > path {
+        animation-delay: 2s; }
+      #introduction svg.mobile-svg .travel.path-3 > path {
+        animation-delay: 4s; }
+      #introduction svg.mobile-svg .travel.path-4 > path {
+        animation-delay: 5.7s; }
+      #introduction svg.mobile-svg .travel.path-5 > path {
+        animation-delay: 7s; }
+      #introduction svg.mobile-svg .commit text, #introduction svg.mobile-svg .commit path, #introduction svg.mobile-svg .merge-icon text, #introduction svg.mobile-svg .merge-icon path {
+        animation: show 0.5s ease forwards;
+        animation-delay: 1s; }
+      #introduction svg.mobile-svg .commit.commit-1 > text, #introduction svg.mobile-svg .commit.commit-1 > path, #introduction svg.mobile-svg .merge-icon.commit-1 > text, #introduction svg.mobile-svg .merge-icon.commit-1 > path {
+        animation-delay: 0.5s; }
+      #introduction svg.mobile-svg .commit.commit-2 > text, #introduction svg.mobile-svg .commit.commit-2 > path, #introduction svg.mobile-svg .merge-icon.commit-2 > text, #introduction svg.mobile-svg .merge-icon.commit-2 > path {
+        animation-delay: 1.5s; }
+      #introduction svg.mobile-svg .commit.commit-3 > text, #introduction svg.mobile-svg .commit.commit-3 > path, #introduction svg.mobile-svg .merge-icon.commit-3 > text, #introduction svg.mobile-svg .merge-icon.commit-3 > path {
+        animation-delay: 3.5s; }
+      #introduction svg.mobile-svg .commit.commit-4 > text, #introduction svg.mobile-svg .commit.commit-4 > path, #introduction svg.mobile-svg .merge-icon.commit-4 > text, #introduction svg.mobile-svg .merge-icon.commit-4 > path {
+        animation-delay: 5s; }
+      #introduction svg.mobile-svg .commit.commit-5 > text, #introduction svg.mobile-svg .commit.commit-5 > path, #introduction svg.mobile-svg .merge-icon.commit-5 > text, #introduction svg.mobile-svg .merge-icon.commit-5 > path {
+        animation-delay: 6.7s; }
+      #introduction svg.mobile-svg .commit > text, #introduction svg.mobile-svg .merge-icon > text {
+        animation-delay: 6.5s; }
   #work {
     height: auto;
     width: calc(100% - 2em);
-    grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
+    grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
     grid-template-rows: 0.5fr 1fr 1fr 1fr;
     padding: 1em;
     text-align: center; }
