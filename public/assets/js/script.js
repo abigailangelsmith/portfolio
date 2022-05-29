@@ -209,7 +209,6 @@
             picture.src = '/public/assets/images/pictures/picture_' + scheme + '.png';
         
             const oldScheme = body.dataset.currentColourScheme;
-
             event.target.dataset.scheme = oldScheme;
             body.dataset.currentColourScheme = scheme;
         }
@@ -297,7 +296,6 @@ function buildProjectTileTemplate(project) {
                 </div>`;
 
     document.querySelector('#work .project-tiles').insertAdjacentHTML("beforeend", html);
-
     document.querySelector('#work .project-tiles .project-tile[data-project-id="' + projectId + '"]').addEventListener('click', switchHighlightedProject);
 }
 
@@ -367,7 +365,6 @@ function updatePreSelectedProjectDisplay(project) {
     }
 
     document.querySelector(classList.projectHighlight.techUsed).innerHTML = "";
-
     project.technologyUsed.forEach(tech => {
         if (tech in techSVGCodes) {
             document.querySelector(classList.projectHighlight.techUsed).insertAdjacentHTML("beforeend", techSVGCodes[tech]);
@@ -389,9 +386,7 @@ function updateProjectTile(project, tileId) {
 
     document.querySelector(tileClass + ' img').src = project.display.url;
     document.querySelector(tileClass + ' img').alt = project.title;
-
     document.querySelector(tileClass + ' .tech-used').innerHTML = techUsedSVGs;
-
     document.querySelector(tileClass).dataset.projectId = project.sys.id;
 }
 
