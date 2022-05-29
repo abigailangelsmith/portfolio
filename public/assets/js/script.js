@@ -76,7 +76,7 @@
             return window.getComputedStyle(document.querySelector('nav')).opacity !== '0';
         }
 
-        if (isMobileNavigationIconShowing) {
+        if (isMobileNavigationIconShowing()) {
             document.querySelectorAll('nav p').forEach((navItem) => {
                 navItem.addEventListener('click', mobileNavigationClose);
             });
