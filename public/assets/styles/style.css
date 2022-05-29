@@ -595,3 +595,7 @@ footer {
     footer > div:nth-of-type(odd) h3 {
       padding-right: 0;
       padding-bottom: 1em; } }
+
+@media (max-width: 449px) {
+  header #flash-hello h3 {
+    font-size: 0.8em; } }
