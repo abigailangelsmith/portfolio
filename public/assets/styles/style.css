@@ -606,7 +606,7 @@ footer {
   #work {
     height: auto;
     width: calc(100% - 2em);
-    grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
+    grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
     grid-template-rows: 0.5fr 1fr 1fr 1fr;
     padding: 1em;
     text-align: center; }
