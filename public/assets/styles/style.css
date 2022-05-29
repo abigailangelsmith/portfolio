@@ -7,18 +7,18 @@
   --p-t_main-colour: #6662D9;
   --p-t_accent-colour: #72FCDB;
   --p-t_opacity-colour: #6763d9cc;
-  --p-t_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_p-t_main.svg);
-  --p-t_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_p-t_accent.svg);
+  --p-t_main-nav-arrow: url(/assets/images/nav-arrows/nav-arrow_p-t_main.svg);
+  --p-t_accent-nav-arrow: url(/assets/images/nav-arrows/nav-arrow_p-t_accent.svg);
   --o-b_main-colour: #FFAB34;
   --o-b_accent-colour: #84297E;
   --o-b_opacity-colour: #ffab34cc;
-  --o-b_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_o-b_main.svg);
-  --o-b_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_o-b_accent.svg);
+  --o-b_main-nav-arrow: url(/assets/images/nav-arrows/nav-arrow_o-b_main.svg);
+  --o-b_accent-nav-arrow: url(/assets/images/nav-arrows/nav-arrow_o-b_accent.svg);
   --b-ng_main-colour: #0697B5;
   --b-ng_accent-colour: #9EF204;
   --b-ng_opacity-colour: #0697b5cc;
-  --b-ng_main-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_b-ng_main.svg);
-  --b-ng_accent-nav-arrow: url(/public/assets/images/nav-arrows/nav-arrow_b-ng_accent.svg); }
+  --b-ng_main-nav-arrow: url(/assets/images/nav-arrows/nav-arrow_b-ng_main.svg);
+  --b-ng_accent-nav-arrow: url(/assets/images/nav-arrows/nav-arrow_b-ng_accent.svg); }
 
 html {
   scroll-behavior: smooth; }
