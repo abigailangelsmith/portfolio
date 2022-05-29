@@ -493,7 +493,7 @@ footer {
       footer > div:nth-of-type(odd) svg {
         height: 3em; }
 
-@media (max-width: 1900px) {
+@media (max-width: 1000px) {
   body section {
     padding-left: 1em;
     padding-right: 1em; }
@@ -553,7 +553,7 @@ footer {
       #work > section:nth-of-type(1) .project-highlight-display {
         width: 100%; }
       #work > section:nth-of-type(1) .project-highlight-information {
-        padding: 1em 0;
+        padding: 2em 0 1em 0;
         width: 100%;
         align-items: flex-start; }
         #work > section:nth-of-type(1) .project-highlight-information .tech-used {
