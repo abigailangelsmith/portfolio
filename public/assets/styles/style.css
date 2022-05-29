@@ -476,7 +476,7 @@ footer {
   display: grid;
   grid-template-columns: 45% auto;
   align-items: stretch;
-  height: 100px;
+  height: 120px;
   position: relative;
   background-color: var(--main-colour); }
   footer > div {
