@@ -181,8 +181,7 @@ header nav {
   #introduction svg.mobile-svg {
     display: none; }
   #introduction svg.desktop-svg {
-    padding: 0 0 1.5em 0;
-    margin-right: -6em; }
+    padding: 0 0 1.5em 0; }
     #introduction svg.desktop-svg .pull-request-icon {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
@@ -537,7 +536,7 @@ footer {
           color: var(--accent-colour); }
   #introduction {
     width: calc(100% - 2em);
-    justify-content: space-evenly; }
+    justify-content: center; }
     #introduction svg.desktop-svg {
       display: none; }
     #introduction svg.mobile-svg {
