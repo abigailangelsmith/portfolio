@@ -15,10 +15,13 @@
         padding: 1.5em 0;
     }
 
-    svg {
+    svg.mobile-svg {
+        display: none;
+    }
+
+    svg.desktop-svg {
         
         padding: 0 0 1.5em 0;
-        margin-right: -6em;
 
         .pull-request-icon {
             stroke: var(--accent-colour);

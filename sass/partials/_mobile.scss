@@ -1,0 +1,314 @@
+@media (max-width: 1000px) {
+
+    body {
+        section {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+
+    header {
+        #flash-hello {
+            opacity: 1;
+            grid-template-columns: 100px auto 100px;
+
+            svg, h3 {
+                animation: none;
+            }
+
+            section#mobile-nav-icon {
+                display: flex;
+                background-color: var(--accent-colour);
+                pointer-events: all;
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        nav {
+            margin-top: 100px;
+            grid-template-columns: auto;
+            height: fit-content;
+            width: 100%;
+            right: 0;
+            border-bottom: 5px solid var(--main-colour);
+            pointer-events: none;
+            opacity: 0;
+
+            section:last-of-type p.active:after {
+                background-image: var(--accent-nav-arrow);
+            }
+
+            p.active::after {
+                left: 0px;
+                transform: translateY(50%) rotate(90deg);
+                bottom: 50%;
+            }
+
+            & > section {
+                grid-template-columns: auto;
+                padding: 0;
+
+                p {
+                    padding: 2em;
+                }
+
+                #colour-changing-options {
+                    padding: 1em 0;
+                    width: 100%;
+                    text-align: center;
+                    background-color: var(--accent-colour);
+                    
+                }
+
+                &:nth-of-type(even) {
+                    background-color: var(--main-colour);
+
+                    p {
+                        color: var(--accent-colour);
+                    }
+                }
+            }
+        }
+    }
+
+    #introduction {
+        width: calc(100% - 2em);
+        justify-content: center;
+
+        svg.desktop-svg {
+            display: none;
+        }
+
+        svg.mobile-svg {
+            display: inherit;
+            padding: 0 0 1.5em 0;
+
+            .pull-request-icon {
+                stroke: var(--accent-colour);
+                stroke-miterlimit:10;
+                stroke-width:7px;
+            }
+            .pull-request-icon .circle, .pull-request-icon .arrow-head {
+                stroke: none;
+                fill: var(--accent-colour);
+            }
+            
+            .merge-icon {
+                stroke: var(--accent-colour);
+                stroke-miterlimit:10;
+                stroke-width:7px;
+            }
+            .merge-icon .circle {
+                stroke: none;
+                fill: var(--accent-colour);
+            }
+    
+            .pull-request-icon .text, .merge-icon .text {
+                stroke: none;
+            }
+    
+            .travel {
+                stroke: var(--accent-colour);
+                stroke-miterlimit:10;
+                stroke-width:7px;
+            }
+            .travel path {
+                fill: none;
+            }
+    
+            .commit path {
+                stroke: none;
+                fill: var(--accent-colour);
+                opacity: 0;
+            }
+    
+            .text {
+                font-family:AutomateOT-Bold, Automate OT;
+                font-size:14px;
+                fill: var(--accent-colour);
+                opacity: 0;
+            }
+    
+            .pull-request-icon .text {
+                opacity: 1;
+            }
+            
+            .travel {
+    
+                & > path {
+                    stroke-dashoffset: 38px;
+                    stroke-dasharray: 38px;
+                    animation: draw 1.5s ease forwards;
+                    animation-delay: 0.5s;
+                }
+    
+                &.path-2 > path {
+                    animation-delay: 2s;
+                }
+    
+                &.path-3 > path {
+                    animation-delay: 4s;
+                }
+    
+                &.path-4 > path {
+                    animation-delay: 5.7s;
+                }
+    
+                &.path-5 > path {
+                    animation-delay: 7s;
+                }
+            }
+    
+            .commit, .merge-icon {
+                
+                & text, & path {
+                    animation: show 0.5s ease forwards;
+                    animation-delay: 1s;
+                }
+    
+                &.commit-1 > text, &.commit-1 > path {
+                    animation-delay: 0.5s;
+                }
+    
+                &.commit-2 > text, &.commit-2 > path {
+                    animation-delay: 1.5s;
+                }
+    
+                &.commit-3 > text, &.commit-3 > path {
+                    animation-delay: 3.5s;
+                }
+    
+                &.commit-4 > text, &.commit-4 > path {
+                    animation-delay: 5s;
+                }
+    
+                &.commit-5 > text, &.commit-5 > path {
+                    animation-delay: 6.7s;
+                }
+    
+                & > text {
+                    animation-delay: 6.5s;
+                }
+            }
+        }
+    }
+
+    #work {
+        height: auto;
+        width: calc(100% - 2em);
+        grid-template-areas:
+        "heading heading heading"
+         "highlight highlight highlight"
+         "highlight highlight highlight"
+         "highlight highlight highlight"
+         "tiles tiles tiles";
+         grid-template-rows: 0.5fr 1fr 1fr 1fr;
+        padding: 100px 1em;
+        text-align: center;
+
+        aside {
+            display: none;
+        }
+
+        & > section:nth-of-type(1) {
+        flex-direction: column;
+        margin-bottom: 1em;
+
+        .project-highlight-display {
+            width: 100%;
+        }
+
+        .project-highlight-information {
+            padding: 2em 0 1em 0;
+            width: 100%;
+            align-items: flex-start;
+
+            .tech-used {
+                align-self: flex-start;
+                padding-bottom: 1em;
+            }
+
+            h2, p {
+                text-align: left;
+                padding-bottom: 1em;
+            }
+            
+            .project-links a {
+                align-items: flex-start;
+            }
+
+        }
+        }
+
+        & > section:nth-of-type(2) {
+            margin-left: 0;
+            margin-right: 0;
+
+            .project-tiles {
+                padding: 0;
+            }
+        }
+
+        .project-tile {
+            margin-right: 2em;
+        }
+    }
+
+    #contact {
+        height: auto;
+        width: calc(100% - 2em);
+        padding: 100px 1em;
+
+        h1 {
+            align-self: center;
+            padding: 3em 0;
+        }
+
+        #info {
+            flex-direction: column;
+
+            section a {
+                padding-bottom: 2em;
+            }
+
+            aside {
+                flex-direction: column;
+
+                #picture-of-me {
+                    text-align: center;
+                }
+
+                #extra-info div {
+                    padding-left: 1em;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    footer {
+
+        & > div:nth-of-type(odd) {
+            flex-direction: column;
+            padding: 1em 2em;
+
+            h3 {
+                padding-right: 0;
+                padding-bottom: 1em;
+            }
+
+        }
+    }
+    
+}
+
+@media (max-width: 449px) {
+
+    header #flash-hello h3 {
+        font-size: 0.8em;
+    }
+
+}

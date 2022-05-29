@@ -102,8 +102,16 @@ header #flash-hello svg, header #flash-hello h3 {
   margin-top: 0;
   animation: flashHello 1s forwards 3s; }
 
-header #flash-hello svg path {
+header #flash-hello section > svg path {
   stroke: var(--accent-colour); }
+
+header #flash-hello section#mobile-nav-icon {
+  display: none;
+  pointer-events: none; }
+  header #flash-hello section#mobile-nav-icon svg {
+    animation: none; }
+    header #flash-hello section#mobile-nav-icon svg path {
+      stroke: var(--main-colour); }
 
 header nav {
   opacity: 0;
@@ -170,69 +178,70 @@ header nav {
   #introduction h1 {
     align-self: center;
     padding: 1.5em 0; }
-  #introduction svg {
-    padding: 0 0 1.5em 0;
-    margin-right: -6em; }
-    #introduction svg .pull-request-icon {
+  #introduction svg.mobile-svg {
+    display: none; }
+  #introduction svg.desktop-svg {
+    padding: 0 0 1.5em 0; }
+    #introduction svg.desktop-svg .pull-request-icon {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
       stroke-width: 7px; }
-    #introduction svg .pull-request-icon .circle, #introduction svg .pull-request-icon .arrow-head {
+    #introduction svg.desktop-svg .pull-request-icon .circle, #introduction svg.desktop-svg .pull-request-icon .arrow-head {
       stroke: none;
       fill: var(--accent-colour); }
-    #introduction svg .merge-icon {
+    #introduction svg.desktop-svg .merge-icon {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
       stroke-width: 7px; }
-    #introduction svg .merge-icon .circle {
+    #introduction svg.desktop-svg .merge-icon .circle {
       stroke: none;
       fill: var(--accent-colour); }
-    #introduction svg .pull-request-icon .text, #introduction svg .merge-icon .text {
+    #introduction svg.desktop-svg .pull-request-icon .text, #introduction svg.desktop-svg .merge-icon .text {
       stroke: none; }
-    #introduction svg .travel {
+    #introduction svg.desktop-svg .travel {
       stroke: var(--accent-colour);
       stroke-miterlimit: 10;
       stroke-width: 7px; }
-    #introduction svg .travel path {
+    #introduction svg.desktop-svg .travel path {
       fill: none; }
-    #introduction svg .commit path {
+    #introduction svg.desktop-svg .commit path {
       stroke: none;
       fill: var(--accent-colour);
       opacity: 0; }
-    #introduction svg .text {
+    #introduction svg.desktop-svg .text {
       font-family: AutomateOT-Bold, Automate OT;
       font-size: 14px;
       fill: var(--accent-colour);
       opacity: 0; }
-    #introduction svg .pull-request-icon .text {
+    #introduction svg.desktop-svg .pull-request-icon .text {
       opacity: 1; }
-    #introduction svg .travel > path {
+    #introduction svg.desktop-svg .travel > path {
       stroke-dashoffset: 217px;
       stroke-dasharray: 217px;
       animation: draw 1.5s ease forwards;
       animation-delay: 0.5s; }
-    #introduction svg .travel.path-2 > path {
+    #introduction svg.desktop-svg .travel.path-2 > path {
       animation-delay: 2s; }
-    #introduction svg .travel.path-3 > path {
+    #introduction svg.desktop-svg .travel.path-3 > path {
       animation-delay: 4s; }
-    #introduction svg .travel.path-4 > path {
+    #introduction svg.desktop-svg .travel.path-4 > path {
       animation-delay: 5.7s; }
-    #introduction svg .travel.path-5 > path {
+    #introduction svg.desktop-svg .travel.path-5 > path {
       animation-delay: 7s; }
-    #introduction svg .commit text, #introduction svg .commit path, #introduction svg .merge-icon text, #introduction svg .merge-icon path {
+    #introduction svg.desktop-svg .commit text, #introduction svg.desktop-svg .commit path, #introduction svg.desktop-svg .merge-icon text, #introduction svg.desktop-svg .merge-icon path {
       animation: show 0.5s ease forwards;
       animation-delay: 1s; }
-    #introduction svg .commit.commit-1 > text, #introduction svg .commit.commit-1 > path, #introduction svg .merge-icon.commit-1 > text, #introduction svg .merge-icon.commit-1 > path {
+    #introduction svg.desktop-svg .commit.commit-1 > text, #introduction svg.desktop-svg .commit.commit-1 > path, #introduction svg.desktop-svg .merge-icon.commit-1 > text, #introduction svg.desktop-svg .merge-icon.commit-1 > path {
       animation-delay: 0.5s; }
-    #introduction svg .commit.commit-2 > text, #introduction svg .commit.commit-2 > path, #introduction svg .merge-icon.commit-2 > text, #introduction svg .merge-icon.commit-2 > path {
+    #introduction svg.desktop-svg .commit.commit-2 > text, #introduction svg.desktop-svg .commit.commit-2 > path, #introduction svg.desktop-svg .merge-icon.commit-2 > text, #introduction svg.desktop-svg .merge-icon.commit-2 > path {
       animation-delay: 1.5s; }
-    #introduction svg .commit.commit-3 > text, #introduction svg .commit.commit-3 > path, #introduction svg .merge-icon.commit-3 > text, #introduction svg .merge-icon.commit-3 > path {
+    #introduction svg.desktop-svg .commit.commit-3 > text, #introduction svg.desktop-svg .commit.commit-3 > path, #introduction svg.desktop-svg .merge-icon.commit-3 > text, #introduction svg.desktop-svg .merge-icon.commit-3 > path {
       animation-delay: 3.5s; }
-    #introduction svg .commit.commit-4 > text, #introduction svg .commit.commit-4 > path, #introduction svg .merge-icon.commit-4 > text, #introduction svg .merge-icon.commit-4 > path {
+    #introduction svg.desktop-svg .commit.commit-4 > text, #introduction svg.desktop-svg .commit.commit-4 > path, #introduction svg.desktop-svg .merge-icon.commit-4 > text, #introduction svg.desktop-svg .merge-icon.commit-4 > path {
       animation-delay: 5s; }
-    #introduction svg .commit.commit-5 > text, #introduction svg .commit.commit-5 > path, #introduction svg .merge-icon.commit-5 > text, #introduction svg .merge-icon.commit-5 > path {
+    #introduction svg.desktop-svg .commit.commit-5 > text, #introduction svg.desktop-svg .commit.commit-5 > path, #introduction svg.desktop-svg .merge-icon.commit-5 > text, #introduction svg.desktop-svg .merge-icon.commit-5 > path {
       animation-delay: 6.7s; }
-    #introduction svg .commit > text, #introduction svg .merge-icon > text {
+    #introduction svg.desktop-svg .commit > text, #introduction svg.desktop-svg .merge-icon > text {
       animation-delay: 6.5s; }
 
 @keyframes draw {
@@ -433,28 +442,24 @@ header nav {
         position: relative; }
         #contact #info aside #picture-of-me svg {
           position: absolute;
-          top: 0;
-          left: 0; }
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
           #contact #info aside #picture-of-me svg:nth-of-type(1) {
-            top: 90px;
-            left: -45px; }
+            margin-left: -160px;
+            margin-top: -35px; }
           #contact #info aside #picture-of-me svg:nth-of-type(2) {
-            top: 150px;
-            left: -35px; }
+            margin-left: -165px;
+            margin-top: 10px; }
           #contact #info aside #picture-of-me svg:nth-of-type(3) {
-            top: auto;
-            bottom: 0;
-            left: auto;
-            right: -10px; }
+            margin-top: 105px;
+            margin-left: 154px; }
           #contact #info aside #picture-of-me svg:nth-of-type(4) {
-            top: auto;
-            bottom: 55px;
-            left: auto;
-            right: -30px; }
+            margin-top: 62px;
+            margin-left: 168px; }
           #contact #info aside #picture-of-me svg:nth-of-type(5) {
-            left: auto;
-            right: 45px;
-            top: 10px; }
+            margin-top: -125px;
+            margin-left: 88px; }
       #contact #info aside #extra-info {
         padding-top: 1em; }
         #contact #info aside #extra-info div {
@@ -488,3 +493,178 @@ footer {
         padding-right: 3em; }
       footer > div:nth-of-type(odd) svg {
         height: 3em; }
+
+@media (max-width: 1000px) {
+  body section {
+    padding-left: 1em;
+    padding-right: 1em; }
+  header #flash-hello {
+    opacity: 1;
+    grid-template-columns: 100px auto 100px; }
+    header #flash-hello svg, header #flash-hello h3 {
+      animation: none; }
+    header #flash-hello section#mobile-nav-icon {
+      display: flex;
+      background-color: var(--accent-colour);
+      pointer-events: all; }
+      header #flash-hello section#mobile-nav-icon svg {
+        cursor: pointer; }
+  header nav {
+    margin-top: 100px;
+    grid-template-columns: auto;
+    height: fit-content;
+    width: 100%;
+    right: 0;
+    border-bottom: 5px solid var(--main-colour);
+    pointer-events: none;
+    opacity: 0; }
+    header nav section:last-of-type p.active:after {
+      background-image: var(--accent-nav-arrow); }
+    header nav p.active::after {
+      left: 0px;
+      transform: translateY(50%) rotate(90deg);
+      bottom: 50%; }
+    header nav > section {
+      grid-template-columns: auto;
+      padding: 0; }
+      header nav > section p {
+        padding: 2em; }
+      header nav > section #colour-changing-options {
+        padding: 1em 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--accent-colour); }
+      header nav > section:nth-of-type(even) {
+        background-color: var(--main-colour); }
+        header nav > section:nth-of-type(even) p {
+          color: var(--accent-colour); }
+  #introduction {
+    width: calc(100% - 2em);
+    justify-content: center; }
+    #introduction svg.desktop-svg {
+      display: none; }
+    #introduction svg.mobile-svg {
+      display: inherit;
+      padding: 0 0 1.5em 0; }
+      #introduction svg.mobile-svg .pull-request-icon {
+        stroke: var(--accent-colour);
+        stroke-miterlimit: 10;
+        stroke-width: 7px; }
+      #introduction svg.mobile-svg .pull-request-icon .circle, #introduction svg.mobile-svg .pull-request-icon .arrow-head {
+        stroke: none;
+        fill: var(--accent-colour); }
+      #introduction svg.mobile-svg .merge-icon {
+        stroke: var(--accent-colour);
+        stroke-miterlimit: 10;
+        stroke-width: 7px; }
+      #introduction svg.mobile-svg .merge-icon .circle {
+        stroke: none;
+        fill: var(--accent-colour); }
+      #introduction svg.mobile-svg .pull-request-icon .text, #introduction svg.mobile-svg .merge-icon .text {
+        stroke: none; }
+      #introduction svg.mobile-svg .travel {
+        stroke: var(--accent-colour);
+        stroke-miterlimit: 10;
+        stroke-width: 7px; }
+      #introduction svg.mobile-svg .travel path {
+        fill: none; }
+      #introduction svg.mobile-svg .commit path {
+        stroke: none;
+        fill: var(--accent-colour);
+        opacity: 0; }
+      #introduction svg.mobile-svg .text {
+        font-family: AutomateOT-Bold, Automate OT;
+        font-size: 14px;
+        fill: var(--accent-colour);
+        opacity: 0; }
+      #introduction svg.mobile-svg .pull-request-icon .text {
+        opacity: 1; }
+      #introduction svg.mobile-svg .travel > path {
+        stroke-dashoffset: 38px;
+        stroke-dasharray: 38px;
+        animation: draw 1.5s ease forwards;
+        animation-delay: 0.5s; }
+      #introduction svg.mobile-svg .travel.path-2 > path {
+        animation-delay: 2s; }
+      #introduction svg.mobile-svg .travel.path-3 > path {
+        animation-delay: 4s; }
+      #introduction svg.mobile-svg .travel.path-4 > path {
+        animation-delay: 5.7s; }
+      #introduction svg.mobile-svg .travel.path-5 > path {
+        animation-delay: 7s; }
+      #introduction svg.mobile-svg .commit text, #introduction svg.mobile-svg .commit path, #introduction svg.mobile-svg .merge-icon text, #introduction svg.mobile-svg .merge-icon path {
+        animation: show 0.5s ease forwards;
+        animation-delay: 1s; }
+      #introduction svg.mobile-svg .commit.commit-1 > text, #introduction svg.mobile-svg .commit.commit-1 > path, #introduction svg.mobile-svg .merge-icon.commit-1 > text, #introduction svg.mobile-svg .merge-icon.commit-1 > path {
+        animation-delay: 0.5s; }
+      #introduction svg.mobile-svg .commit.commit-2 > text, #introduction svg.mobile-svg .commit.commit-2 > path, #introduction svg.mobile-svg .merge-icon.commit-2 > text, #introduction svg.mobile-svg .merge-icon.commit-2 > path {
+        animation-delay: 1.5s; }
+      #introduction svg.mobile-svg .commit.commit-3 > text, #introduction svg.mobile-svg .commit.commit-3 > path, #introduction svg.mobile-svg .merge-icon.commit-3 > text, #introduction svg.mobile-svg .merge-icon.commit-3 > path {
+        animation-delay: 3.5s; }
+      #introduction svg.mobile-svg .commit.commit-4 > text, #introduction svg.mobile-svg .commit.commit-4 > path, #introduction svg.mobile-svg .merge-icon.commit-4 > text, #introduction svg.mobile-svg .merge-icon.commit-4 > path {
+        animation-delay: 5s; }
+      #introduction svg.mobile-svg .commit.commit-5 > text, #introduction svg.mobile-svg .commit.commit-5 > path, #introduction svg.mobile-svg .merge-icon.commit-5 > text, #introduction svg.mobile-svg .merge-icon.commit-5 > path {
+        animation-delay: 6.7s; }
+      #introduction svg.mobile-svg .commit > text, #introduction svg.mobile-svg .merge-icon > text {
+        animation-delay: 6.5s; }
+  #work {
+    height: auto;
+    width: calc(100% - 2em);
+    grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    padding: 100px 1em;
+    text-align: center; }
+    #work aside {
+      display: none; }
+    #work > section:nth-of-type(1) {
+      flex-direction: column;
+      margin-bottom: 1em; }
+      #work > section:nth-of-type(1) .project-highlight-display {
+        width: 100%; }
+      #work > section:nth-of-type(1) .project-highlight-information {
+        padding: 2em 0 1em 0;
+        width: 100%;
+        align-items: flex-start; }
+        #work > section:nth-of-type(1) .project-highlight-information .tech-used {
+          align-self: flex-start;
+          padding-bottom: 1em; }
+        #work > section:nth-of-type(1) .project-highlight-information h2, #work > section:nth-of-type(1) .project-highlight-information p {
+          text-align: left;
+          padding-bottom: 1em; }
+        #work > section:nth-of-type(1) .project-highlight-information .project-links a {
+          align-items: flex-start; }
+    #work > section:nth-of-type(2) {
+      margin-left: 0;
+      margin-right: 0; }
+      #work > section:nth-of-type(2) .project-tiles {
+        padding: 0; }
+    #work .project-tile {
+      margin-right: 2em; }
+  #contact {
+    height: auto;
+    width: calc(100% - 2em);
+    padding: 100px 1em; }
+    #contact h1 {
+      align-self: center;
+      padding: 3em 0; }
+    #contact #info {
+      flex-direction: column; }
+      #contact #info section a {
+        padding-bottom: 2em; }
+      #contact #info aside {
+        flex-direction: column; }
+        #contact #info aside #picture-of-me {
+          text-align: center; }
+        #contact #info aside #extra-info div {
+          padding-left: 1em;
+          justify-content: center; }
+  footer > div:nth-of-type(odd) {
+    flex-direction: column;
+    padding: 1em 2em; }
+    footer > div:nth-of-type(odd) h3 {
+      padding-right: 0;
+      padding-bottom: 1em; } }
+
+@media (max-width: 449px) {
+  header #flash-hello h3 {
+    font-size: 0.8em; } }
