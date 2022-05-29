@@ -73,8 +73,13 @@
         width: calc(100% - 2em);
         justify-content: space-evenly;
 
-        svg {
-            margin: 0;
+        svg.desktop-svg {
+            display: none;
+        }
+
+        svg.mobile-svg {
+            display: inherit;
+            padding: 0 0 1.5em 0;
         }
     }
 
