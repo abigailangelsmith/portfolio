@@ -192,7 +192,7 @@
             root.style.setProperty('--main-nav-arrow', 'var(--' + scheme + '_main-nav-arrow)');
             root.style.setProperty('--accent-nav-arrow', 'var(--' + scheme + '_accent-nav-arrow)');
             
-            picture.src = '/public/assets/images/pictures/picture_' + scheme + '.png';
+            picture.src = '/assets/images/pictures/picture_' + scheme + '.png';
             body.dataset.currentColourScheme = scheme;
         }
 
@@ -206,7 +206,7 @@
             root.style.setProperty('--main-nav-arrow', 'var(--' + scheme + '_main-nav-arrow)');
             root.style.setProperty('--accent-nav-arrow', 'var(--' + scheme + '_accent-nav-arrow)');
             
-            picture.src = '/public/assets/images/pictures/picture_' + scheme + '.png';
+            picture.src = '/assets/images/pictures/picture_' + scheme + '.png';
         
             const oldScheme = body.dataset.currentColourScheme;
             event.target.dataset.scheme = oldScheme;
