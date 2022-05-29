@@ -441,28 +441,24 @@ header nav {
         position: relative; }
         #contact #info aside #picture-of-me svg {
           position: absolute;
-          top: 0;
-          left: 0; }
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
           #contact #info aside #picture-of-me svg:nth-of-type(1) {
-            top: 90px;
-            left: -45px; }
+            margin-left: -160px;
+            margin-top: -35px; }
           #contact #info aside #picture-of-me svg:nth-of-type(2) {
-            top: 150px;
-            left: -35px; }
+            margin-left: -165px;
+            margin-top: 10px; }
           #contact #info aside #picture-of-me svg:nth-of-type(3) {
-            top: auto;
-            bottom: 0;
-            left: auto;
-            right: -10px; }
+            margin-top: 105px;
+            margin-left: 154px; }
           #contact #info aside #picture-of-me svg:nth-of-type(4) {
-            top: auto;
-            bottom: 55px;
-            left: auto;
-            right: -30px; }
+            margin-top: 62px;
+            margin-left: 168px; }
           #contact #info aside #picture-of-me svg:nth-of-type(5) {
-            left: auto;
-            right: 45px;
-            top: 10px; }
+            margin-top: -125px;
+            margin-left: 88px; }
       #contact #info aside #extra-info {
         padding-top: 1em; }
         #contact #info aside #extra-info div {
@@ -590,18 +586,9 @@ footer {
         flex-direction: column; }
         #contact #info aside #picture-of-me {
           text-align: center; }
-          #contact #info aside #picture-of-me svg:nth-of-type(1) {
-            left: -3px; }
-          #contact #info aside #picture-of-me svg:nth-of-type(2) {
-            left: 4px; }
-          #contact #info aside #picture-of-me svg:nth-of-type(3) {
-            right: 20px; }
-          #contact #info aside #picture-of-me svg:nth-of-type(4) {
-            right: 2px; }
-          #contact #info aside #picture-of-me svg:nth-of-type(5) {
-            right: 78px; }
         #contact #info aside #extra-info div {
-          padding-left: 1em; }
+          padding-left: 1em;
+          justify-content: center; }
   footer > div:nth-of-type(odd) {
     flex-direction: column;
     padding: 1em 2em; }
