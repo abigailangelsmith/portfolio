@@ -59,6 +59,32 @@
                     }
                 });
             });
+
+        // MOBILE NAVIGATION
+
+        function onClickMobileNavigationOptionClose() {
+            document.querySelector('nav').style.opacity = 0;
+            document.querySelector('nav').style.pointerEvents = 'none';
+        }
+
+        if (window.getComputedStyle(document.querySelector('#mobile-nav-icon')).display !== 'none') {
+            document.querySelectorAll('nav p').forEach((navItem) => {
+                navItem.addEventListener('click', onClickMobileNavigationOptionClose);
+            });
+        }
+
+        function onClickMobileNavigationToggle() {
+            console.log('ticked');
+            if (document.querySelector('nav').style.opacity == 0) {
+                document.querySelector('nav').style.opacity = 1;
+                document.querySelector('nav').style.pointerEvents = 'all';
+            } else {
+                document.querySelector('nav').style.opacity = 0;
+                document.querySelector('nav').style.pointerEvents = 'none';
+            }
+        }
+
+        document.querySelector('section#mobile-nav-icon svg').addEventListener('click', onClickMobileNavigationToggle);
         
         // NAVIGATION
 
@@ -366,8 +392,10 @@ function switchHighlightedProject(event) {
 
 function headerIntroduction() {
     setTimeout(() => {
-        document.querySelector('header nav').style.opacity = 1;
-        document.querySelector('header nav').style.pointerEvents = 'all';
-        document.querySelector('header nav').style.transition = 'opacity 1s';
+        if (window.getComputedStyle(document.querySelector('#mobile-nav-icon')).display === 'none') {
+            document.querySelector('header nav').style.opacity = 1;
+            document.querySelector('header nav').style.pointerEvents = 'all';
+            document.querySelector('header nav').style.transition = 'opacity 1s';
+        }
     }, 3000);
 }

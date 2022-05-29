@@ -505,7 +505,10 @@ footer {
       animation: none; }
     header #flash-hello section#mobile-nav-icon {
       display: flex;
-      background-color: var(--accent-colour); }
+      background-color: var(--accent-colour);
+      pointer-events: all; }
+      header #flash-hello section#mobile-nav-icon svg {
+        cursor: pointer; }
   header nav {
     margin-top: 100px;
     grid-template-columns: auto;
@@ -513,7 +516,8 @@ footer {
     width: 100%;
     right: 0;
     border-bottom: 5px solid var(--main-colour);
-    width: 0; }
+    pointer-events: none;
+    opacity: 0; }
     header nav section:last-of-type p.active:after {
       background-image: var(--accent-nav-arrow); }
     header nav p.active::after {
@@ -608,7 +612,7 @@ footer {
     width: calc(100% - 2em);
     grid-template-areas: "heading heading heading" "highlight highlight highlight" "highlight highlight highlight" "highlight highlight highlight" "tiles tiles tiles";
     grid-template-rows: 0.5fr 1fr 1fr 1fr;
-    padding: 1em;
+    padding: 100px 1em;
     text-align: center; }
     #work aside {
       display: none; }
@@ -639,7 +643,7 @@ footer {
   #contact {
     height: auto;
     width: calc(100% - 2em);
-    padding-bottom: 0; }
+    padding: 100px 1em; }
     #contact h1 {
       align-self: center;
       padding: 3em 0; }
