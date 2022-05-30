@@ -3,7 +3,7 @@ The purpose is to create a portfolio in order to display a demonstration of my d
 
 Visit my deployed portfolio here: [abigailangelsmith.uk](https://abigailangelsmith.uk/)
 
-# Using Scss within this project
+# Using Sass / Scss within this project
 
 ### Instructions to follow for auto-compliation of styles.css file
 
