@@ -1,7 +1,7 @@
 # Purpose of this Project
-The purpose was to create a portfolio in order to display a demonstration of my development skills along with live work I have created or contributed to.
+The purpose is to create a portfolio in order to display a demonstration of my development skills, along with showcasing live work I have created or contributed to.
 
-Visit website here: [abigailangelsmith.uk](https://abigailangelsmith.uk/)
+Visit my deployed portfolio here: [abigailangelsmith.uk](https://abigailangelsmith.uk/)
 
 # Using Scss within this project
 
