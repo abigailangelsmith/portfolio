@@ -1,5 +1,5 @@
-# portfolio
-A portfolio to display a demonstration of my development skills.
+# Purpose of this Project
+The purpose was to create a portfolio in order to display a demonstration of my development skills along with live work I have created or contributed to.
 
 Visit website here: [abigailangelsmith.uk](https://abigailangelsmith.uk/)
 
