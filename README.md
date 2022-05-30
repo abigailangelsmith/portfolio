@@ -1,9 +1,9 @@
 # portfolio
 A portfolio to display a demonstration of my development skills.
 
-Readme W.I.P
+Visit website here: [abigailangelsmith.uk](https://abigailangelsmith.uk/)
 
-# Using Sass within this project
+# Using Scss within this project
 
 ### Instructions to follow for auto-compliation of styles.css file
 
