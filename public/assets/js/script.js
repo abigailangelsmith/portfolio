@@ -326,8 +326,9 @@ function updatePreSelectedProjectDisplay(project) {
     document.querySelector(classList.projectHighlight.highlight).dataset.projectId = projectId;
 
     document.querySelector(classList.projectHighlight.display).scrollTop = 0;
-    document.querySelector(classList.projectHighlight.display + ' > img').src = project.display.url;
-    document.querySelector(classList.projectHighlight.display + ' > img').alt = project.title;
+    document.querySelector(classList.projectHighlight.display + ' a img').src = project.display.url;
+    document.querySelector(classList.projectHighlight.display + ' a img').alt = project.title;
+    document.querySelector(classList.projectHighlight.display + ' a').href = project.url;
 
     document.querySelector(classList.projectHighlight.information + ' > h2').innerText = project.title;
     document.querySelector(classList.projectHighlight.information + ' > p').innerText = project.description;
