@@ -126,8 +126,8 @@
             }
     
             .text {
-                font-family:AutomateOT-Bold, Automate OT;
-                font-size:14px;
+                font-family: $accent-font;
+                font-size: 14px;
                 fill: var(--accent-colour);
                 opacity: 0;
             }

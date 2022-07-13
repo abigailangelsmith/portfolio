@@ -49,7 +49,7 @@ h1, h2, h3, li, p, a {
   margin: 0; }
 
 h1 {
-  font-family: "Automate OT", Arial, Helvetica, sans-serif; }
+  font-family: "Automate", Arial, Helvetica, sans-serif; }
 
 ul {
   display: inline-block; }
@@ -91,7 +91,7 @@ header #flash-hello, header nav {
       height: 3em;
       width: 3em; }
     header #flash-hello > section p, header nav > section p {
-      font-family: "Automate OT", Arial, Helvetica, sans-serif;
+      font-family: "Automate", Arial, Helvetica, sans-serif;
       font-weight: bold; }
     header #flash-hello > section:nth-of-type(even), header nav > section:nth-of-type(even) {
       background-color: var(--accent-colour); }
@@ -209,7 +209,7 @@ header nav {
       fill: var(--accent-colour);
       opacity: 0; }
     #introduction svg.desktop-svg .text {
-      font-family: AutomateOT-Bold, Automate OT;
+      font-family: "Automate", Arial, Helvetica, sans-serif;
       font-size: 14px;
       fill: var(--accent-colour);
       opacity: 0; }
@@ -573,7 +573,7 @@ footer {
         fill: var(--accent-colour);
         opacity: 0; }
       #introduction svg.mobile-svg .text {
-        font-family: AutomateOT-Bold, Automate OT;
+        font-family: "Automate", Arial, Helvetica, sans-serif;
         font-size: 14px;
         fill: var(--accent-colour);
         opacity: 0; }
